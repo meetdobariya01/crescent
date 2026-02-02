@@ -1,0 +1,76 @@
+.whoiam-section {
+  padding: 100px 0;
+  background: linear-gradient(
+    90deg,
+    rgba(43, 100, 206, 1) 0%,
+    rgba(220, 50, 215, 1) 100%
+  );
+  color: #fff;
+  overflow: hidden;
+}
+
+.whoiam-title {
+  font-size: 42px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.divider-dot {
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  border-radius: 50%;
+  margin: 16px auto 0;
+}
+
+.whoiam-card {
+  height: 100%;
+  padding: 40px 30px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(12px);
+  transition: all 0.4s ease;
+  text-align: center;
+}
+
+.whoiam-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.whoiam-card.featured {
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.whoiam-icon {
+  font-size: 42px;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.whoiam-card h4 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.whoiam-card p {
+  font-size: 15.5px;
+  line-height: 1.7;
+  opacity: 0.95;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .whoiam-section {
+    padding: 70px 20px;
+  }
+
+  .whoiam-title {
+    font-size: 32px;
+  }
+
+  .whoiam-card {
+    padding: 30px 22px;
+  }
+}

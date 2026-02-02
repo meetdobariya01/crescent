@@ -47,7 +47,7 @@ const Whatwedo = () => {
               </motion.h2> */}
 
               <motion.p
-                className="section-text"
+                className="section-text funnel-sans"
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2, duration: 0.7 }}
@@ -63,7 +63,7 @@ const Whatwedo = () => {
               </motion.p>
 
               <motion.p
-                className="section-text"
+                className="section-text funnel-sans"
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.35, duration: 0.7 }}
