@@ -35,7 +35,7 @@ const Footer = () => {
           </Col>
 
           {/* SERVICES */}
-          <Col lg={2} md={6}>
+          <Col lg={3} md={6}>
             <motion.div
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -61,15 +61,20 @@ const Footer = () => {
               <h5 className="footer-title">Company</h5>
               <ul className="footer-links">
                 <li>
-                  <Link className="text-light text-decoration-none" to="/about-us">About Us</Link>
+                  <Link
+                    className="text-light text-decoration-none"
+                    to="/about-us"
+                  >
+                    About Us
+                  </Link>
                 </li>
-                <li>
+                <li className="text-d">
                   <Link to="/our-experts">Our Experts</Link>
                 </li>
-                <li>
+                <li className="text-d">
                   <Link to="/privacy-policy">Privacy Policy</Link>
                 </li>
-                <li>
+                <li className="text-d">
                   <Link to="/contact">Contact Us</Link>
                 </li>
               </ul>
@@ -77,18 +82,18 @@ const Footer = () => {
           </Col>
 
           {/* CONTACT */}
-          <Col lg={3} md={6}>
+          <Col lg={2} md={6}>
             <motion.div
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.6 }}
             >
               <h5 className="footer-title">Connect</h5>
-              <p className="footer-text">
-               <a href="mailto:info@crescentworld.com">
-                        info@crescentworld.com
-                      </a>
-              </p>
+              <div className="text-d">
+                <a href="mailto:info@crescentworld.com">
+                  info@crescentworld.com
+                </a>
+              </div>
 
               <div className="social-icons">
                 {/* <motion.a whileHover={{ scale: 1.2 }} href="#">
