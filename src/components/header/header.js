@@ -38,7 +38,7 @@ const Header = () => {
           <ul className="navbar-nav mx-auto premium-nav">
             {[
               { name: "Home", path: "/" },
-              { name: "Apple Solutions & Services", path: "/about" },
+              { name: "Apple Solutions & Services", path: "/apple-solution" },
               { name: "Luxury Electronics & Lifestyle", path: "/services" },
               { name: "Contact Us", path: "/contact" },
             ].map((item, i) => (

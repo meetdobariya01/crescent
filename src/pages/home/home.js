@@ -4,6 +4,7 @@ import Footer from "../../components/footer/footer";
 import Working from "../../components/working/working";
 import Hero from "../../components/hero-section/hero";
 import Solution from "../../components/Innovative_solution/solution";
+import Whatwedo from "../../components/whatwedo/whatwedo";
 
 const Home = () => {
   return (
@@ -19,6 +20,9 @@ const Home = () => {
 
       {/* Innovative Solutions Section */}
       <Solution />
+
+      {/* What We Do Section */}
+      <Whatwedo />
 
       {/* Footer Component */}
       <Footer />

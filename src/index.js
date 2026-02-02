@@ -1,20 +1,22 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+import React from "react";
+import ReactDOM from "react-dom/client";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
-import Home from './pages/home/home';
+import Home from "./pages/home/home";
+import Applesolution from "./pages/apple-solution/applesolution";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-    <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-      </Routes>
-    </Router>
+  <Router>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/apple-solution" element={<Applesolution />} />
+    </Routes>
+  </Router>,
 );
 
 // If you want to start measuring performance in your app, pass a function

@@ -1,19 +1,12 @@
-/* body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+body {
+  padding-top: 80px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-} */
 @font-face {
   font-family: "MyCustomFont";
-  src: url("../public/assests/fonts/sf-pro-display/SFPRODISPLAYBOLD.OTF") format("truetype");
+  src: url("../public/assests/fonts/sf-pro-display/SFPRODISPLAYBOLD.OTF")
+    format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -25,11 +18,16 @@ code {
 
 @font-face {
   font-family: "sf-medium";
-  src: url("../public/assests/fonts/sf-pro-display/SFPRODISPLAYMEDIUM.OTF") format("truetype");
+  src: url("../public/assests/fonts/sf-pro-display/SFPRODISPLAYMEDIUM.OTF")
+    format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 .sf-medium-font {
   font-family: "sf-medium", sans-serif;
+}
+
+.funnel-sans {
+  font-family: "Funnel Sans", sans-serif;
 }

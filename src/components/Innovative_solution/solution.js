@@ -21,6 +21,12 @@ const sections = [
     img: "./images/convergence.jpeg",
     bg: "light",
   },
+    {
+    title: "Immersive Technology Solutions",
+    text: "At Crescent World, our Immersive Technology solutions blend advanced hardware, intelligent software, and sensory engineering to create unforgettable digital experiences. Designed for enterprises, institutions, and experience-driven venues, our solutions go beyond visuals, engaging sight, sound, motion, and interaction.From immersive learning environments to experiential brand showcases, we deliver end-to-end solutions tailored to your vision.Immersive projection and LED environments with interactive walls, XR-ready systems, sensory motion effects, synchronized control, and advanced audio-visual engines.",
+    img: "./images/convergence.peg",
+    bg: "light",
+  },
   {
     title: "Luxury Electronics",
     text: "Crescent World curates a range of premium lifestyle electronics from over 135 luxury brands. We blend cutting-edge technology with elegant design, offering products that enhance everyday living. Our collection includes high-fidelity audio systems and wireless speakers, smart wearable devices (like rings and watches), wellness tech and designer home appliances. From immersive sound systems and smartwatches to wellness gadgets and high-end appliances, each gadget delivers performance and style. Customers enjoy innovative, beautifully designed electronics - from premium smartwatches and headphones to advanced smart rings and home comforts - that redefine the luxury tech experience.",
@@ -39,7 +45,7 @@ const Solution = () => {
             transition={{ duration: 0.6 }}
             className="whywork-title text-center mb-5 sf-pro-font"
           >
-           Crescent World - Innovative Technology Solutions
+           <span className="me-2 gradient-text">Crescent World</span>- Innovative Technology Solutions
           </motion.h2>
           {sections.map((item, index) => (
             <div
@@ -61,7 +67,7 @@ const Solution = () => {
               </div>
 
               {/* Content */}
-              <div className={`col-md-6 p-0`}>
+              <div className={`col-md-6 p-3`}>
                 <motion.div
                   // className={`story-content ${
                   //   item.bg === "dark" ? "dark" : "light"

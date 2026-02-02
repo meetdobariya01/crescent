@@ -30,7 +30,7 @@ const Working = () => {
             transition={{ duration: 0.6 }}
             className="whywork-title sf-pro-font"
           >
-            Why Work with Crescent?
+            Why Work with <span className="ms-2 gradient-text">Crescent World</span>
           </motion.h2>
 
           <motion.p
