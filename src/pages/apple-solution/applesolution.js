@@ -97,7 +97,7 @@ const Applesolution = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="whywork-subtitle sf-medium-font"
+          className="whywork-subtitle funnel-sans"
         >
           At Crescent World, Apple is not just a product line-it’s an ecosystem,
           thoughtfully delivered. We help individuals, businesses, and
@@ -174,7 +174,7 @@ const Applesolution = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="whywork-subtitle sf-medium-font"
+          className="whywork-subtitle funnel-sans"
         >
           We believe great technology should feel invisible. Every Apple
           solution we deliver is guided by simplicity, precision, and care—so

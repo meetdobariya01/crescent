@@ -8,6 +8,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import Home from "./pages/home/home";
 import Applesolution from "./pages/apple-solution/applesolution";
+import Contact from './pages/contact/contact';
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -15,8 +16,9 @@ root.render(
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/apple-solution" element={<Applesolution />} />
+      <Route path="contact" element={<Contact />} />
     </Routes>
-  </Router>,
+  </Router>
 );
 
 // If you want to start measuring performance in your app, pass a function

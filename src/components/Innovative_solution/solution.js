@@ -24,7 +24,7 @@ const sections = [
     {
     title: "Immersive Technology Solutions",
     text: "At Crescent World, our Immersive Technology solutions blend advanced hardware, intelligent software, and sensory engineering to create unforgettable digital experiences. Designed for enterprises, institutions, and experience-driven venues, our solutions go beyond visuals, engaging sight, sound, motion, and interaction.From immersive learning environments to experiential brand showcases, we deliver end-to-end solutions tailored to your vision.Immersive projection and LED environments with interactive walls, XR-ready systems, sensory motion effects, synchronized control, and advanced audio-visual engines.",
-    img: "./images/convergence.peg",
+    img: "./images/Immersive.jpeg",
     bg: "light",
   },
   {
@@ -77,7 +77,7 @@ const Solution = () => {
                   transition={{ duration: 0.6 }}
                 >
                   <h3 className="sf-pro-font">{item.title}</h3>
-                  <p className="sf-medium-font">{item.text}</p>
+                  <p className="funnel-sans">{item.text}</p>
                 </motion.div>
               </div>
             </div>
