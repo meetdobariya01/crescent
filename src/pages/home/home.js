@@ -21,7 +21,7 @@ const Home = () => {
       <Solution />
 
       {/* Footer Component */}
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };
