@@ -7,12 +7,14 @@ import reportWebVitals from './reportWebVitals';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import Home from './pages/home/home';
+import Contact from './pages/contact/contact';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="contact" element={<Contact />} />
       </Routes>
     </Router>
 );
