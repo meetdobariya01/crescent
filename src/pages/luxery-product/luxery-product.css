@@ -1,0 +1,47 @@
+.craft-section {
+  padding: 40px 0;
+}
+
+.craft-row {
+  padding: 40px;
+  border-radius: 18px;
+  margin-bottom: 40px;
+}
+
+.bg-warm {
+  background: #e4b3a0;
+}
+
+.bg-dark-warm {
+  background: #9a5a48;
+  color: #fff;
+}
+
+.image-wrap {
+  overflow: hidden;
+  border-radius: 18px;
+}
+
+.rounded-image {
+  width: 100%;
+  border-radius: 18px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+.craft-title {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.craft-text {
+  font-size: 16px;
+  line-height: 1.7;
+  max-width: 500px;
+}
+
+@media (max-width: 768px) {
+  .craft-row {
+    padding: 25px;
+  }
+}

@@ -11,7 +11,9 @@ import FaqSection from "../../components/faqs/faqs";
 
 const Home = () => {
   return (
+    
     <div>
+      
       {/* Header Component */}
       <Header />
 

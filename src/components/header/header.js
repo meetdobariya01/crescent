@@ -39,7 +39,7 @@ const Header = () => {
             {[
               { name: "Home", path: "/" },
               { name: "Apple Solutions & Services", path: "/apple-solution" },
-              { name: "Luxury Electronics & Lifestyle", path: "/services" },
+              { name: "Brands", path: "/luxury-products" },
               { name: "Contact Us", path: "/contact" },
             ].map((item, i) => (
               <motion.li
@@ -71,14 +71,14 @@ const Header = () => {
               <FaInstagram />
             </motion.a>
 
-            {/* <motion.a
+            <motion.a
               whileHover={{ scale: 1.2 }}
-              href="https://twitter.com"
+              href="https://x.com/Crescent_Mac"
               target="_blank"
               rel="noopener noreferrer"
             >
               <FaTwitter />
-            </motion.a> */}
+            </motion.a>
 
             <motion.a
               whileHover={{ scale: 1.2 }}

@@ -8,7 +8,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import Home from "./pages/home/home";
 import Applesolution from "./pages/apple-solution/applesolution";
-import Contact from './pages/contact/contact';
+import Contact from "./pages/contact/contact";
+import Luxery from "./pages/luxery-product/luxery";
+import Newline from "./pages/luxery-product/brands/newline";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -16,9 +18,11 @@ root.render(
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/apple-solution" element={<Applesolution />} />
-      <Route path="contact" element={<Contact />} />
+      <Route path="/luxury-products" element={<Luxery />} />
+      <Route path="/contact" element={<Contact />} />
+      <Route path="/newline" element={<Newline />} />
     </Routes>
-  </Router>
+  </Router>,
 );
 
 // If you want to start measuring performance in your app, pass a function

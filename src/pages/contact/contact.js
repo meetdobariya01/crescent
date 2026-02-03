@@ -1,5 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import "./contact.css";
 import Header from "../../components/header/header";
 import Footer from "../../components/footer/footer";
@@ -18,6 +20,15 @@ const item = {
 };
 
 const Contact = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "instant", // or "smooth"
+    });
+  }, [pathname]);
   return (
     <div>
       {/* header */}
@@ -159,7 +170,7 @@ const Contact = () => {
               >
                 <iframe
                   title="map"
-                  src="https://maps.google.com/maps?q=133%20Centennial%20Ridge%20Dr&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d36141.27018425535!2d72.51086012096434!3d23.042339758002885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e84f53fffffff%3A0xa54e184aaa583f99!2sCrescent%20Electronics%20Pvt%20Ltd!5e1!3m2!1sen!2sin!4v1770028120985!5m2!1sen!2sin"
                 />
               </motion.div>
 
@@ -187,7 +198,7 @@ const Contact = () => {
 
                     {title === "Location" && (
                       <a
-                        href="https://www.google.com/maps?q=133+Centennial+Ridge+Dr,+Acworth+GA,+30102"
+                        href="https://maps.app.goo.gl/D4eLANRMmRDqU31D8"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
@@ -204,7 +215,7 @@ const Contact = () => {
         </section>
       </motion.div>
       {/* footer */}
-      <Footer/>
+      <Footer />
     </div>
   );
 };

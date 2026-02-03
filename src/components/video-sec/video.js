@@ -42,7 +42,7 @@ const Video = () => {
             whileHover={{ scale: 1.02 }}
           >
             <motion.video
-              src="./images/apple-video.MP4"
+              src="./images/apple-video.mp4"
               autoPlay
               muted
               loop

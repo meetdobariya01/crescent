@@ -76,7 +76,7 @@ const Solution = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6 }}
                 >
-                  <h3 className="sf-pro-font">{item.title}</h3>
+                  <h3 className="sf-pro-font gradient-text ">{item.title}</h3>
                   <p className="funnel-sans">{item.text}</p>
                 </motion.div>
               </div>

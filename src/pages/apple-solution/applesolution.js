@@ -36,7 +36,7 @@ const features = [
     title: "Apple Watch",
     word: "A new dimension of experience",
     text: "Apple Watch brings meaningful insights and connectivity to your wrist. It encourages healthier habits, keeps you informed, and helps you stay connected without distraction. From fitness and health tracking to productivity and safety features, Apple Watch integrates seamlessly with iPhone and the broader Apple ecosystem. Crescent World helps individuals and organizations unlock its full potential-balancing performance, awareness, and well-being.",
-    img: "/images/products/watch.jpeg",
+    img: "/images/products/watch.png",
     // bg: "bg-dark-brown",
     reverse: true,
   },
@@ -178,7 +178,7 @@ const Applesolution = () => {
           transition={{ duration: 0.6 }}
           className="whywork-title sf-pro-font"
         >
-          The Crescent World Difference
+          The <span className="gradient-text">Crescent World</span> Difference
         </motion.h2>
 
         <motion.p

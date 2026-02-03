@@ -4,11 +4,11 @@ import { motion } from "framer-motion";
 import "./hero.css";
 
 const services = [
-  "Staffing & Recruitment",
-  "Medical Billing",
-  "Software Development",
-  "Accounting & Bookkeeping",
-  "Debt Collection",
+  "Curated",
+  "Innovative",
+  "Integrated",
+  "Experiential",
+  "Premium",
 ];
 
 const Hero = () => {
@@ -58,14 +58,14 @@ const Hero = () => {
               </motion.div>
 
               {/* CTA */}
-              <motion.button
+              {/* <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="hero-btn"
               >
                 Get Started Today
                 <FaArrowRight />
-              </motion.button>
+              </motion.button> */}
             </div>
           </div>
         </div>
