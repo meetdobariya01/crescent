@@ -11,6 +11,7 @@ import Applesolution from "./pages/apple-solution/applesolution";
 import Contact from "./pages/contact/contact";
 import Luxery from "./pages/luxery-product/luxery";
 import Newline from "./pages/luxery-product/brands/newline";
+import Seenspire from "./pages/luxery-product/brands/Seenspire";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -21,6 +22,7 @@ root.render(
       <Route path="/luxury-products" element={<Luxery />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/newline" element={<Newline />} />
+       <Route path="/seenspire" element={<Seenspire/>} />
     </Routes>
   </Router>,
 );
