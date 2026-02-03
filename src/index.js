@@ -12,6 +12,7 @@ import Contact from "./pages/contact/contact";
 import Luxery from "./pages/luxery-product/luxery";
 import Newline from "./pages/luxery-product/brands/newline";
 import Seenspire from "./pages/luxery-product/brands/Seenspire";
+import Heckler from "./pages/luxery-product/heckler";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -23,6 +24,7 @@ root.render(
       <Route path="/contact" element={<Contact />} />
       <Route path="/newline" element={<Newline />} />
        <Route path="/seenspire" element={<Seenspire/>} />
+        <Route path="/heckler" element={<Heckler/>} />
     </Routes>
   </Router>,
 );
