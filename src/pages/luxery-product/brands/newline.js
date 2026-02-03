@@ -13,18 +13,21 @@ const features = [
       <>
         Crescent World offers the full range of Newline displays and
         accessories. These include the flagship Q Series (high-performance 4K
-        touch displays with powerful Android OS and multi-user profiles), the <span className="gradient-text">Z
-        Series </span> (education-optimized panels with optional built-in PCs/AI cameras
-        for hybrid classrooms and meetings), <span className="gradient-text">Lyra</span> (Newline’s latest education
-        display designed for engaging lessons with paper-like writing and vivid
-        4K imagery), <span className="gradient-text">MIRA</span> (a versatile corporate-grade screen for boardrooms and
-        training rooms, featuring optical bonding for superior clarity and an
-        integrated camera/mic array), <span className="gradient-text">FLEX</span> (a 27″ all-in-one desktop
-        collaboration monitor with built-in 4K camera, echo-cancelling mic,
-        active pen and USB-C power), and <span className="gradient-text">Elara</span> (the top-tier hybrid classroom
-        panel with premium audio, wide viewing angle, optical-bonded touch
-        glass, modular camera and multiple user profiles). We also carry all
-        Newline accessories - from mobile carts and wall mounts to cameras,
+        touch displays with powerful Android OS and multi-user profiles), the{" "}
+        <span className="gradient-text">Z Series </span> (education-optimized
+        panels with optional built-in PCs/AI cameras for hybrid classrooms and
+        meetings), <span className="gradient-text">Lyra</span> (Newline’s latest
+        education display designed for engaging lessons with paper-like writing
+        and vivid 4K imagery), <span className="gradient-text">MIRA</span> (a
+        versatile corporate-grade screen for boardrooms and training rooms,
+        featuring optical bonding for superior clarity and an integrated
+        camera/mic array), <span className="gradient-text">FLEX</span> (a 27″
+        all-in-one desktop collaboration monitor with built-in 4K camera,
+        echo-cancelling mic, active pen and USB-C power), and{" "}
+        <span className="gradient-text">Elara</span> (the top-tier hybrid
+        classroom panel with premium audio, wide viewing angle, optical-bonded
+        touch glass, modular camera and multiple user profiles). We also carry
+        all Newline accessories - from mobile carts and wall mounts to cameras,
         microphones and dongles - to complete any installation. Each Newline
         product is designed to be non-proprietary and easy to integrate, so it
         works seamlessly with your existing IT infrastructure.
@@ -59,6 +62,16 @@ const cardVariant = {
   show: { opacity: 1, y: 0, transition: { duration: 0.8 } },
 };
 const Newline = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "instant", // or "smooth"
+    });
+  }, [pathname]);
+
   return (
     <div>
       {/* Header */}

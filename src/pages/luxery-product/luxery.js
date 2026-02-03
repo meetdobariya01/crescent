@@ -30,7 +30,7 @@ const data = [
     list2: "Medical & healthcare imaging",
     list3: "Control rooms & monitoring centers",
     list4: "Financial and data-intensive environments",
-    link: "/",
+    link: "/eizo",
     // bg: "bg-warm",
     reverse: true,
   },
@@ -67,7 +67,7 @@ const data = [
     list2: "Exhibitions & trade shows",
     list3: "Showrooms & experience centers",
     list4: "High-impact marketing displays",
-    link: "/",
+    link: "/hypervsn",
   },
   {
     title: "Heckler – Professional Mounts & Stands",
