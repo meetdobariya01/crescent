@@ -82,7 +82,7 @@ const Footer = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.6 }}
             >
-              <h5 className="footer-title sf-pro-font">Connect</h5>
+              <h5 cl assName="footer-title sf-pro-font">Connect</h5>
               <div className="text-d funnel-sans">
                 <a href="mailto:info@crescentworld.com">
                   info@crescentworld.com

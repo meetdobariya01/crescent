@@ -13,6 +13,7 @@ import Luxery from "./pages/luxery-product/luxery";
 import Newline from "./pages/luxery-product/brands/newline";
 import Eizo from "./pages/luxery-product/brands/eizo";
 import Hypervsn from "./pages/luxery-product/brands/hypervsn";
+import Seenspire from "./pages/luxery-product/brands/Seenspire";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -25,6 +26,7 @@ root.render(
       <Route path="/newline" element={<Newline />} />
       <Route path="/eizo" element={<Eizo />} />
       <Route path="/hypervsn" element={<Hypervsn />} />
+       <Route path="/seenspire" element={<Seenspire/>} />
     </Routes>
   </Router>,
 );

@@ -43,7 +43,7 @@ const data = [
     list2: "Hospitality & coworking spaces",
     list3: "Retail environments",
     list4: "Internal communication displays",
-    link: "/",
+    link: "/seenspire",
   },
   {
     title: "Mapsted – Indoor Mapping & Navigation",
