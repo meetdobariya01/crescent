@@ -78,7 +78,7 @@ const data = [
     list2: "Digital signage installations",
     list3: "Conference rooms & offices",
     list4: "Public and commercial spaces",
-    link: "/",
+    link: "/heckler",
     // bg: "bg-dark-warm",
     reverse: true,
   },
