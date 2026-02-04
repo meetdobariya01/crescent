@@ -40,7 +40,7 @@ const Header = () => {
               // { name: "Home", path: "/" },
               { name: "Apple Solutions & Services", path: "/apple-solution" },
               { name: "Convergence", path: "/convergence" },
-              { name: "Immersive Technology Solutions", path: "/luxury-products" },
+              { name: "Immersive Technology Solutions", path: "/immresive" },
               { name: "Brands", path: "/luxury-products" },
               { name: "Contact Us", path: "/contact" },
             ].map((item, i) => (

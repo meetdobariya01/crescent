@@ -1,0 +1,160 @@
+/* =========================
+   BASE
+========================= */
+.immersive-page {
+  background: #f8fafc;
+  color: #0f172a;
+  overflow-x: hidden; /* FIX horizontal scroll */
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+.immersive-hero {
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #e0f2fe, #f8fafc);
+  position: relative;
+  padding: 120px 16px 90px;
+}
+
+.immersive-hero h1 {
+  font-size: clamp(2rem, 6vw, 3.6rem);
+  font-weight: 700;
+}
+
+.immersive-hero h2 {
+  font-size: clamp(1.2rem, 4.5vw, 1.8rem);
+  color: #2563eb;
+  margin-top: 10px;
+}
+
+.immersive-hero p {
+  font-size: 1rem;
+  margin-top: 14px;
+  line-height: 1.6;
+}
+
+/* HERO GLOW */
+.hero-glow {
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(circle, rgba(37,99,235,0.3), transparent);
+  top: 18%;
+  left: 50%;
+  transform: translateX(-50%);
+  filter: blur(70px);
+  z-index: -1;
+}
+
+/* =========================
+   SECTIONS
+========================= */
+.immersive-section {
+  padding: 110px 16px;
+}
+
+.immersive-dark {
+  background: linear-gradient(135deg, #e0f2fe, #ede9fe);
+  padding: 110px 16px;
+}
+
+.immersive-cta {
+  padding: 120px 16px;
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  color: #fff;
+}
+
+/* =========================
+   CARDS
+========================= */
+.immersive-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+  padding: 32px;
+  border-radius: 20px;
+  height: 100%;
+  transition: all 0.4s ease;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+}
+
+.immersive-card h5 {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.immersive-card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Disable 3D effects on touch devices */
+@media (hover: none) {
+  .immersive-card {
+    transform: none !important;
+  }
+}
+
+/* =========================
+   USE CASES
+========================= */
+.usecase-box {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 26px;
+  font-weight: 600;
+  text-align: center;
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+/* =========================
+   MOBILE OPTIMIZATION
+========================= */
+@media (max-width: 768px) {
+
+  .immersive-hero {
+    min-height: auto; /* FIX overflow */
+    padding: 100px 14px 80px;
+  }
+
+  .hero-glow {
+    width: 220px;
+    height: 220px;
+    top: 10%;
+    filter: blur(60px);
+  }
+
+  .immersive-section,
+  .immersive-dark,
+  .immersive-cta {
+    padding: 70px 14px;
+  }
+
+  .immersive-card {
+    padding: 24px;
+  }
+
+  .usecase-box {
+    padding: 20px;
+    font-size: 0.95rem;
+  }
+}
+
+/* =========================
+   EXTRA SMALL DEVICES
+========================= */
+@media (max-width: 480px) {
+
+  .immersive-hero h1 {
+    font-size: 2rem;
+  }
+
+  .immersive-hero h2 {
+    font-size: 1.1rem;
+  }
+
+  .immersive-hero p {
+    font-size: 0.95rem;
+  }
+}

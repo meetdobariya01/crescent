@@ -17,6 +17,7 @@ import Seenspire from "./pages/luxery-product/brands/Seenspire";
 import Heckler from "./pages/luxery-product/brands/heckler";
 import Mapsted from "./pages/luxery-product/brands/mapsted";
 import Convergence from "./pages/convergence/convergence";
+import Immresive from "./pages/immresive/immresive";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -33,6 +34,7 @@ root.render(
       <Route path="/heckler" element={<Heckler />} />
       <Route path="/mapsted" element={<Mapsted />} />
       <Route path="/convergence" element={<Convergence />} />
+       <Route path="/immresive" element={<Immresive/>} />
     </Routes>
   </Router>,
 );
