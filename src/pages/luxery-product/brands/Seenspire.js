@@ -11,11 +11,19 @@ const features = [
     word: "Performance, redefined",
     text: (
       <>
-       Seenspire is an automated, content-driven digital signage solution designed to keep screens visually engaging without manual effort. The platform intelligently aggregates company communications, social media, workplace applications, and professionally licensed infotainment—such as news, weather, sports, and trivia—into a continuously updated visual stream. Through a simple web or mobile interface, administrators connect displays, select content sources, and Seenspire instantly generates polished, on-brand layouts. This set-and-forget approach replaces manual slide creation with automation, ensuring screens remain relevant, dynamic, and professionally presented at all times.
-
+        Seenspire is an automated, content-driven digital signage solution
+        designed to keep screens visually engaging without manual effort. The
+        platform intelligently aggregates company communications, social media,
+        workplace applications, and professionally licensed infotainment—such as
+        news, weather, sports, and trivia—into a continuously updated visual
+        stream. Through a simple web or mobile interface, administrators connect
+        displays, select content sources, and Seenspire instantly generates
+        polished, on-brand layouts. This set-and-forget approach replaces manual
+        slide creation with automation, ensuring screens remain relevant,
+        dynamic, and professionally presented at all times.
       </>
     ),
-    img: "./images/brands/z-pro-bnr.webp",
+    img: "./images/brands/seenspire-1.jpeg",
     // bg: "bg-light-cream",
     reverse: false,
   },
@@ -23,7 +31,7 @@ const features = [
     title: "A Unified Platform, Sold as a Service",
     word: "Incredibly capable. Remarkably versatile",
     text: "Seenspire is offered as a flexible, per-screen subscription with scalable pricing, making it suitable for organizations of any size. Customers can choose from infotainment-focused plans that provide access to hundreds of licensed content feeds, integration plans that connect workplace tools and social platforms, or an all-in-one package that unlocks the full ecosystem. Every subscription includes unlimited users, role-based permissions, and complete branding control, allowing organizations to maintain consistency across all displays. With one-click publishing, mobile management, and built-in onboarding and support, Seenspire eliminates the need for design expertise or specialized training.",
-    img: "./images/brands/z-pro-prod1.webp",
+    img: "./images/brands/seenspire-2.jpeg",
     // bg: "bg-soft-brown",
     reverse: true,
   },
@@ -33,7 +41,7 @@ const features = [
     text: "Seenspire is designed for universal adoption across industries and roles. IT and facilities teams can deploy and manage screens effortlessly, while HR, marketing, and communications teams can publish content directly from tools they already use, such as Microsoft Teams, Slack, or social media platforms. The platform is widely used across corporate offices, retail environments, hospitality spaces, educational campuses, healthcare facilities, and public venues. From executive headquarters to storefront displays, Seenspire enables organizations to communicate more effectively without adding operational complexity. ",
     text2:
       "Touch performance is exceptionally smooth: infrared or capacitive sensors plus optical bonding deliver lag-free, paper-like writing and crystal-clear 4K images from any angle. Audio and video are top-quality too - most displays have an 8-mic array with echo cancellation and powerful speakers (even subwoofers in the higher-end models) for rich, room-filling sound. An AI-enabled pan/tilt camera option keeps presenters centered in frame.  All screens feature sleek, minimalist designs (many with anti-glare, low-blue-light and antimicrobial glass coatings) that look great in any modern workspace.",
-    img: "./images/brands/q_plus_prod1.webp",
+    img: "./images/brands/seenspire-3.png",
     // bg: "bg-light-cream",
     reverse: false,
   },
@@ -44,6 +52,15 @@ const cardVariant = {
   show: { opacity: 1, y: 0, transition: { duration: 0.8 } },
 };
 const Seenspire = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "instant", // or "smooth"
+    });
+  }, [pathname]);
   return (
     <div>
       {/* Header */}
@@ -70,16 +87,16 @@ const Seenspire = () => {
           the creation and updating of screen content. It pulls together company
           messages, social media, workplace app updates, and licensed
           “infotainment” (news, weather, sports, trivia, etc.) into one dynamic
-          stream. In practice, administrators connect displays via a simple
-          web or mobile app, select desired content feeds, and Seenspire’s
-          engine instantly formats polished slides for each screen. This
+          stream. In practice, administrators connect displays via a simple web
+          or mobile app, select desired content feeds, and Seenspire’s engine
+          instantly formats polished slides for each screen. This
           “set-and-forget” approach delivers always-fresh, on-brand visuals
           without manual design effort. As Seenspire explains, it provides a
           “content-driven digital signage solution with unlimited access to an
-          abundant library of automated content, available instantly”. In
-          other words, Seenspire replaces tedious slide creation with
-          intelligent automation and professional layouts, keeping displays
-          relevant while saving staff hours of work.
+          abundant library of automated content, available instantly”. In other
+          words, Seenspire replaces tedious slide creation with intelligent
+          automation and professional layouts, keeping displays relevant while
+          saving staff hours of work.
         </motion.p>
       </div>
 
@@ -139,7 +156,7 @@ const Seenspire = () => {
           transition={{ duration: 0.6 }}
           className="whywork-title sf-pro-font"
         >
-         More Impact, <span className="gradient-text"> Less Work</span>
+          More Impact, <span className="gradient-text"> Less Work</span>
         </motion.h2>
 
         <motion.p
@@ -148,7 +165,16 @@ const Seenspire = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="whywork-subtitle funnel-sans"
         >
-          The true value of Seenspire lies in its ability to transform underutilized screens into powerful communication assets. By automating content creation, licensing, and formatting, it saves teams significant time while ensuring displays never go stale. Integrations with platforms like Zoom Rooms and Barco ClickShare allow meeting room screens to double as branded signage when not in use, maximizing existing AV investments. The result is higher engagement, stronger messaging, and consistently fresh visuals—delivered with minimal effort. Seenspire turns digital signage from a maintenance burden into a strategic, high-impact communication tool.
+          The true value of Seenspire lies in its ability to transform
+          underutilized screens into powerful communication assets. By
+          automating content creation, licensing, and formatting, it saves teams
+          significant time while ensuring displays never go stale. Integrations
+          with platforms like Zoom Rooms and Barco ClickShare allow meeting room
+          screens to double as branded signage when not in use, maximizing
+          existing AV investments. The result is higher engagement, stronger
+          messaging, and consistently fresh visuals—delivered with minimal
+          effort. Seenspire turns digital signage from a maintenance burden into
+          a strategic, high-impact communication tool.
         </motion.p>
       </div>
 

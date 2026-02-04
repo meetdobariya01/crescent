@@ -94,16 +94,7 @@
   }
 
   .premium-social {
-    margin-top: 20px;
+    /* margin-top: 20px; */
     /* justify-content: center; */
   }
-}
-.nav-wrapper {
-  /* max-width: 1320px; */
-  margin: 0 auto;
-  padding: 0 12px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 }

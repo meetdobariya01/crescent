@@ -2,8 +2,8 @@ import React from "react";
 import { motion } from "framer-motion";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import Header from "../../components/header/header";
-import Footer from "../../components/footer/footer";
+import Header from "../../../components/header/header";
+import Footer from "../../../components/footer/footer";
 
 const features = [
   {
@@ -47,6 +47,15 @@ const cardVariant = {
   show: { opacity: 1, y: 0, transition: { duration: 0.8 } },
 };
 const Heckler = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "instant", // or "smooth"
+    });
+  }, [pathname]);
   return (
     <div>
       {/* Header */}
@@ -60,7 +69,7 @@ const Heckler = () => {
           transition={{ duration: 0.6 }}
           className="whywork-title sf-pro-font gradient-text"
         >
-       Heckler Design: Precision AV Hardware & Hybrid Workplace Solutions
+          Heckler Design: Precision AV Hardware & Hybrid Workplace Solutions
         </motion.h2>
 
         <motion.p
@@ -136,7 +145,8 @@ const Heckler = () => {
           transition={{ duration: 0.6 }}
           className="whywork-title sf-pro-font"
         >
-         Meeting Room Consoles <span className="gradient-text">iPad Mounts & AV Accessories</span>
+          Meeting Room Consoles{" "}
+          <span className="gradient-text">iPad Mounts & AV Accessories</span>
         </motion.h2>
 
         <motion.p
@@ -145,8 +155,18 @@ const Heckler = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="whywork-subtitle funnel-sans"
         >
-          Heckler’s product suite extends beyond large displays into refined iPad stands, wall mounts, console enclosures, and AV accessories designed for hybrid meeting spaces and interactive environments. These include dedicated Zoom Rooms consoles, wall-mounted iPad enclosures, PoE power adapters, camera mounting shelves for monitor arms, and USB-C connectivity solutions — all crafted to work intuitively with modern collaboration platforms and third-party devices. Whether securing a scheduling tablet on a wall, powering devices with PoE adapters, or integrating camera mounts into a conference setup, Heckler’s accessory range emphasizes clean cable management, secure device mounting, and cohesive design language throughout the workplace.
-
+          Heckler’s product suite extends beyond large displays into refined
+          iPad stands, wall mounts, console enclosures, and AV accessories
+          designed for hybrid meeting spaces and interactive environments. These
+          include dedicated Zoom Rooms consoles, wall-mounted iPad enclosures,
+          PoE power adapters, camera mounting shelves for monitor arms, and
+          USB-C connectivity solutions — all crafted to work intuitively with
+          modern collaboration platforms and third-party devices. Whether
+          securing a scheduling tablet on a wall, powering devices with PoE
+          adapters, or integrating camera mounts into a conference setup,
+          Heckler’s accessory range emphasizes clean cable management, secure
+          device mounting, and cohesive design language throughout the
+          workplace.
         </motion.p>
       </div>
 

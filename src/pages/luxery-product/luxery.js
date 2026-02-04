@@ -54,7 +54,7 @@ const data = [
     list2: "Airports & large venues",
     list3: "Hospitals & healthcare facilities",
     list4: "Shopping malls & exhibitions",
-    link: "/",
+    link: "/mapsted",
     // bg: "bg-dark-cool",
     reverse: true,
   },
