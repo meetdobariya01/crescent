@@ -34,7 +34,7 @@ root.render(
       <Route path="/heckler" element={<Heckler />} />
       <Route path="/mapsted" element={<Mapsted />} />
       <Route path="/convergence" element={<Convergence />} />
-       <Route path="/immresive" element={<Immresive/>} />
+      <Route path="/immresive" element={<Immresive />} />
     </Routes>
   </Router>,
 );
