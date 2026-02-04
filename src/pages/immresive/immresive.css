@@ -39,7 +39,7 @@
   position: absolute;
   width: 320px;
   height: 320px;
-  background: radial-gradient(circle, rgba(37,99,235,0.3), transparent);
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.3), transparent);
   top: 18%;
   left: 50%;
   transform: translateX(-50%);
@@ -61,8 +61,8 @@
 
 .immersive-cta {
   padding: 120px 16px;
-  background: linear-gradient(135deg, #2563eb, #7c3aed);
-  color: #fff;
+  /* background: linear-gradient(135deg, #2563eb, #7c3aed);
+  color: #fff; */
 }
 
 /* =========================
@@ -112,7 +112,6 @@
    MOBILE OPTIMIZATION
 ========================= */
 @media (max-width: 768px) {
-
   .immersive-hero {
     min-height: auto; /* FIX overflow */
     padding: 100px 14px 80px;
@@ -145,7 +144,6 @@
    EXTRA SMALL DEVICES
 ========================= */
 @media (max-width: 480px) {
-
   .immersive-hero h1 {
     font-size: 2rem;
   }
