@@ -18,12 +18,14 @@ import Heckler from "./pages/luxery-product/brands/heckler";
 import Mapsted from "./pages/luxery-product/brands/mapsted";
 import Convergence from "./pages/convergence/convergence";
 import Immresive from "./pages/immresive/immresive";
+import AboutUs from "./pages/aboutus/aboutus";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <Router>
     <Routes>
       <Route path="/" element={<Home />} />
+      <Route path="/aboutus" element={<AboutUs />} />
       <Route path="/apple-solution" element={<Applesolution />} />
       <Route path="/luxury-products" element={<Luxery />} />
       <Route path="/contact" element={<Contact />} />

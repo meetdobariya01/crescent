@@ -37,7 +37,7 @@ const Header = () => {
         <div className="collapse navbar-collapse" id="premiumNav">
           <ul className="navbar-nav mx-auto premium-nav">
             {[
-              // { name: "Home", path: "/" },
+              { name: "AboutUs", path: "/aboutus" },
               { name: "Apple Solutions & Services", path: "/apple-solution" },
               { name: "Convergence", path: "/convergence" },
               { name: "Immersive Technology Solutions", path: "/immresive" },
