@@ -25,7 +25,7 @@ const Hero = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                className="hero-subtitle gradient-text"
+                className="hero-subtitle "
               >
                 WELCOME TO CRESCENT WORLD
               </motion.p>
@@ -37,7 +37,7 @@ const Hero = () => {
                 transition={{ duration: 0.8 }}
                 className="hero-title"
               >
-                From enterprise IT to luxury electronics, we design technology
+                From Apple IT to luxury electronics, we design technology
                 experiences that work beautifully, intelligently, and
                 effortlessly.
               </motion.h1>

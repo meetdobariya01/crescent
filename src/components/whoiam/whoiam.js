@@ -25,11 +25,11 @@ const Whoiam = () => {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          WHO I AM
+          WHO WE ARE
         </motion.h2>
 
         {/* Cards */}
-        <Row className="mt-5 g-4">
+        <Row className="g-4">
           <Col lg={4} md={6}>
             <motion.div
               className="whoiam-card"

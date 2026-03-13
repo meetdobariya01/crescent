@@ -14,8 +14,8 @@ const features = [
         Seenspire is an automated, content-driven digital signage solution
         designed to keep screens visually engaging without manual effort. The
         platform intelligently aggregates company communications, social media,
-        workplace applications, and professionally licensed infotainment—such as
-        news, weather, sports, and trivia—into a continuously updated visual
+        workplace applications, and professionally licensed infotainment-such as
+        news, weather, sports, and trivia-into a continuously updated visual
         stream. Through a simple web or mobile interface, administrators connect
         displays, select content sources, and Seenspire instantly generates
         polished, on-brand layouts. This set-and-forget approach replaces manual
@@ -140,8 +140,8 @@ const Seenspire = () => {
                 >
                   <h3 className="sf-pro-font gradient-text">{item.title}</h3>
                   {/* <h4 className="gradient-text">{item.word}</h4> */}
-                  <p>{item.text}</p>
-                  <p className="mt-3">{item.text2}</p>
+                  <p className="text-format">{item.text}</p>
+                  <p className="mt-3 text-format">{item.text2}</p>
                 </motion.div>
               </div>
             </motion.div>
@@ -172,7 +172,7 @@ const Seenspire = () => {
           with platforms like Zoom Rooms and Barco ClickShare allow meeting room
           screens to double as branded signage when not in use, maximizing
           existing AV investments. The result is higher engagement, stronger
-          messaging, and consistently fresh visuals—delivered with minimal
+          messaging, and consistently fresh visuals-delivered with minimal
           effort. Seenspire turns digital signage from a maintenance burden into
           a strategic, high-impact communication tool.
         </motion.p>

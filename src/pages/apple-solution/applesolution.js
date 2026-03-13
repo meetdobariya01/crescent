@@ -160,7 +160,7 @@ const Applesolution = () => {
                 >
                   <h3 className="sf-pro-font">{item.title}</h3>
                   <h4 className="gradient-text">{item.word}</h4>
-                  <p>{item.text}</p>
+                  <p className="text-format">{item.text}</p>
                   <button type="button" class="btn btn-outline-dark mt-3">
                     Buy Now
                   </button>

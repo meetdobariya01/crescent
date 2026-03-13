@@ -15,7 +15,7 @@ const Header = () => {
         {/* Logo */}
         <a className="navbar-brand premium-logo" href="/">
           <img
-            src="./images/logo.png" 
+            src="./images/logo.png"
             alt="Crescent Logo"
             className="logo-img"
           />
@@ -37,11 +37,12 @@ const Header = () => {
         <div className="collapse navbar-collapse" id="premiumNav">
           <ul className="navbar-nav mx-auto premium-nav">
             {[
-              { name: "AboutUs", path: "/aboutus" },
-              { name: "Apple Solutions & Services", path: "/apple-solution" },
+              { name: "About Us", path: "/aboutUs" },
+              { name: "Apple", path: "/apple-solution" },
               { name: "Convergence", path: "/convergence" },
-              { name: "Immersive Technology Solutions", path: "/immresive" },
+              { name: "Immersive Tech", path: "/immresive" }, 
               { name: "Brands", path: "/luxury-products" },
+              { name: "SaaS", path: "/software" },
               { name: "Contact Us", path: "/contact" },
             ].map((item, i) => (
               <motion.li

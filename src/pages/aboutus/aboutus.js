@@ -1,9 +1,18 @@
 import React from "react";
+import { useEffect } from "react";
+import { useLocation, NavLink } from "react-router-dom";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
+import {
+  FaLinkedinIn,
+  FaUsers,
+  FaHandshake,
+  FaChartLine,
+} from "react-icons/fa";
 import { motion } from "framer-motion";
 import "./aboutus.css";
 import Footer from "../../components/footer/footer";
 import Header from "../../components/header/header";
+import Whoiam from "../../components/whoiam/whoiam";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 60 },
@@ -19,8 +28,34 @@ const stagger = {
     transition: { staggerChildren: 0.15 },
   },
 };
+const principles = [
+  {
+    icon: <FaUsers />,
+    title: "People First",
+    text: "Building relationships that last, with customers, partners, and our team.",
+  },
+  {
+    icon: <FaHandshake />,
+    title: "Integrity in Action",
+    text: "Doing right by commitments, delivering what we promise, and earning trust every day.",
+  },
+  {
+    icon: <FaChartLine />,
+    title: "Continuous Growth",
+    text: "Learning, evolving, and innovating — not just for today, but for what’s next.",
+  },
+];
 
-export default function AboutUs() {
+const Aboutus = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "instant", // or "smooth"
+    });
+  }, [pathname]);
   return (
     <div className="about-page">
       {/* header */}
@@ -37,15 +72,17 @@ export default function AboutUs() {
         <Container>
           <Row className="align-items-center gy-4">
             <Col lg={6}>
-              <h1 className="hero-title">
-                Driving Digital Growth for Modern Businesses
+              <h1 className="hero-title sf-pro-font">
+                Our Journey - From Legacy to Innovation
               </h1>
-              <p className="hero-text">
-                We are a new-age IT consulting startup helping businesses
-                transform ideas into scalable, secure, and high-performance
-                digital solutions.
+              <p className="hero-text funnel-sans">
+                Crescent World is rooted in a legacy of industrial excellence,
+                entrepreneurial spirit, and a relentless pursuit of growth. What
+                began as a humble business with strong values has evolved into a
+                dynamic enterprise shaping tomorrow’s technology and commercial
+                landscape.
               </p>
-              <Button className="hero-btn">Start Your Journey</Button>
+              {/* <NavLink to="/contact"><Button className="hero-btn">Start Your Journey</Button></NavLink> */}
             </Col>
 
             <Col lg={6} className="text-center">
@@ -64,6 +101,9 @@ export default function AboutUs() {
       <section className="journey-v2">
         <Container>
           <Row className="align-items-center gy-5">
+            <motion.h2 variants={fadeUp} className="section-title text-center ">
+              Our Timeline
+            </motion.h2>
             {/* LEFT – FOUNDER IMAGE */}
             <Col lg={5}>
               <motion.div
@@ -74,11 +114,13 @@ export default function AboutUs() {
                 className="founder-img-wrapper"
               >
                 <img
-                  src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf"
+                  src="./images/aboutus.png"
                   alt="Founder Journey"
                   className="img-fluid founder-img"
                 />
-                <div className="founder-badge">Founded with vision 🚀</div>
+                <div className="founder-badge funnel-sans">
+                  Founded with vision 🚀
+                </div>
               </motion.div>
             </Col>
 
@@ -92,36 +134,37 @@ export default function AboutUs() {
                   visible: { transition: { staggerChildren: 0.2 } },
                 }}
               >
-                <motion.h2 variants={fadeUp} className="section-title">
-                  Our Startup Journey
-                </motion.h2>
-
-                <motion.p variants={fadeUp} className="journey-intro">
+                {/* <motion.p variants={fadeUp} className="journey-intro">
                   Our journey started with one belief — technology should solve
                   real business problems, not complicate them.
-                </motion.p>
+                </motion.p> */}
 
                 {/* TIMELINE ITEMS */}
                 {[
                   {
-                    year: "2021",
+                    year: "1984 - The Beginning",
                     title: "The Idea Was Born",
-                    desc: "Identified the gap between business goals and technology execution.",
+                    desc: "Our story started in 1984 with the founding of Crescent Electronics Pvt. Ltd. A vision was set in motion - to build a business grounded in integrity, quality, and long-term relationships. From day one, we committed to delivering dependable solutions to our clients and partners.",
                   },
                   {
-                    year: "2022",
+                    year: "1990s - Establishing Footprints",
                     title: "First Clients & Trust",
-                    desc: "Delivered scalable solutions for startups and SMEs.",
+                    desc: "Throughout the 1990s, Crescent Electronics expanded its capabilities and reach. We strengthened our engineering prowess, diversified our product portfolio, and established a reputation for excellence across key markets. Customer trust became our greatest asset.",
                   },
                   {
-                    year: "2023",
+                    year: "2000s -  Strengthening Capabilities",
                     title: "Growth & Expansion",
-                    desc: "Expanded services into cloud, DevOps, and UI/UX optimization.",
+                    desc: "In the new millennium, Crescent embraced innovation and operational scalability. We integrated modern systems, enhanced quality standards, and began exploring new domains with technology-driven solutions.",
                   },
                   {
-                    year: "Today",
+                    year: "2010s - Growth and Diversification",
                     title: "Trusted IT Consulting Partner",
-                    desc: "Helping businesses scale with confidence and clarity.",
+                    desc: "The 2010s marked a decade of diversification. Crescent ventured beyond traditional electronics into connected technologies, smart solutions, and new business models - building deeper value for customers while adapting to evolving markets.",
+                  },
+                  {
+                    year: "2020s - A New Chapter: Crescent World",
+                    title: "Technology-Driven Growth",
+                    desc: "Today, Crescent World stands as a forward-looking ecosystem. We combine decades of experience with fresh vision - anchoring our legacy in innovation, collaboration, and meaningful impact across technology, commerce, and industry.",
                   },
                 ].map((item, i) => (
                   <motion.div
@@ -131,12 +174,71 @@ export default function AboutUs() {
                   >
                     <div className="timeline-dot" />
                     <div className="timeline-content">
-                      <span className="timeline-year">{item.year}</span>
-                      <h5>{item.title}</h5>
-                      <p>{item.desc}</p>
+                      <span className="timeline-year funnel-sans">
+                        {item.year}
+                      </span>
+                      {/* <h5>{item.title}</h5> */}
+                      <p className="funnel-sans">{item.desc}</p>
                     </div>
                   </motion.div>
                 ))}
+              </motion.div>
+            </Col>
+          </Row>
+        </Container>
+      </section>
+
+      <section className="vision-mission-section">
+        <Container>
+          <Row className="gy-5 align-items-stretch">
+            {/* Vision */}
+            <Col lg={6}>
+              <motion.div
+                className="vm-card vision-card"
+                variants={fadeUp}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                whileHover={{ scale: 1.03 }}
+              >
+                <h2 className="vm-title">Our Vision</h2>
+                <p className="vm-text funnel-sans">
+                  To be a catalyst of transformation — building world-class
+                  solutions that empower industries, enrich communities, and
+                  inspire the future.
+                </p>
+              </motion.div>
+            </Col>
+
+            {/* Mission */}
+            <Col lg={6}>
+              <motion.div
+                className="vm-card mission-card"
+                variants={fadeUp}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                whileHover={{ scale: 1.03 }}
+              >
+                <h2 className="vm-title">Our Mission</h2>
+                <ul className="vm-list funnel-sans">
+                  {[
+                    "Deliver exceptional products and services rooted in trust and quality",
+                    "Innovate with purpose to solve real-world challenges",
+                    "Cultivate partnerships based on mutual success",
+                    "Enable growth for our clients, teams, and stakeholders",
+                  ].map((item, i) => (
+                    <motion.li
+                      key={i}
+                      initial={{ opacity: 0, x: -20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      transition={{ delay: i * 0.15 }}
+                      viewport={{ once: true }}
+                    >
+                      {item}
+                    </motion.li>
+                  ))}
+                </ul>
               </motion.div>
             </Col>
           </Row>
@@ -158,7 +260,7 @@ export default function AboutUs() {
             </motion.h2>
 
             <motion.p
-              className="section-subtitle text-center mb-5"
+              className="section-subtitle text-center funnel-sans mb-5"
               variants={fadeUp}
             >
               Leaders who combine business clarity with deep technical expertise
@@ -167,7 +269,7 @@ export default function AboutUs() {
 
           {/* FOUNDER 1 – IMAGE LEFT */}
           <Row className="align-items-center gy-5 mb-5">
-            <Col lg={6}>
+            <Col lg={4}>
               <motion.div
                 initial={{ opacity: 0, x: -100 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -176,36 +278,47 @@ export default function AboutUs() {
                 className="founder-image-wrapper"
               >
                 <img
-                  src="https://images.unsplash.com/photo-1603415526960-f7e0328c63b1"
+                  src="./images/udyan-shah.png"
                   alt="Founder CEO"
                   className="founder-image"
                 />
               </motion.div>
             </Col>
 
-            <Col lg={6}>
+            <Col lg={8}>
               <motion.div
                 initial={{ opacity: 0, x: 80 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.9, ease: "easeOut", delay: 0.1 }}
                 viewport={{ once: true }}
-                className="founder-text"
+                className="founder-text funnel-sans"
               >
-                <h4>Alex Morgan</h4>
-                <span className="founder-role">Co-Founder & CEO</span>
+                <h4>Udayan Shah</h4>
+                <span className="founder-role">Founder & CEO</span>
                 <p>
-                  Alex shapes the company’s vision and growth strategy. With
-                  hands-on experience in startups and enterprise consulting,
-                  Alex ensures technology decisions always support real business
-                  goals.
+                  Visionary leader driving Crescent World’s innovation in
+                  enterprise IT, smart living, and cutting-edge technology
+                  solutions. Committed to excellence, growth, and empowering
+                  businesses with transformative digital ecosystems and
+                  customer-centric services
                 </p>
+                <motion.a
+                  href="https://www.linkedin.com/in/udayan-shah-49b0561/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="linkedin-link"
+                  whileHover={{ scale: 1.15 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <FaLinkedinIn />
+                </motion.a>
               </motion.div>
             </Col>
           </Row>
 
           {/* FOUNDER 2 – IMAGE RIGHT */}
-          <Row className="align-items-center gy-5 flex-lg-row-reverse">
-            <Col lg={6}>
+          <Row className="align-items-center gy-5 flex-lg-row-reverse ">
+            <Col lg={4}>
               <motion.div
                 initial={{ opacity: 0, x: 100 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -214,31 +327,105 @@ export default function AboutUs() {
                 className="founder-image-wrapper"
               >
                 <img
-                  src="https://images.unsplash.com/photo-1544725176-7c40e5a2c9f9"
+                  src="./images/chinmay-shah.png"
                   alt="Founder CTO"
                   className="founder-image"
                 />
               </motion.div>
             </Col>
 
-            <Col lg={6}>
+            <Col lg={8}>
               <motion.div
                 initial={{ opacity: 0, x: -80 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.9, ease: "easeOut", delay: 0.1 }}
                 viewport={{ once: true }}
-                className="founder-text"
+                className="founder-text funnel-sans"
               >
-                <h4>Jordan Lee</h4>
-                <span className="founder-role">Co-Founder & CTO</span>
+                <h4>Chinamy Shah</h4>
+                <span className="founder-role">Director</span>
                 <p>
-                  Jordan leads the technical direction of the company. From
-                  cloud architecture to performance optimization, Jordan ensures
-                  every solution is scalable, secure, and future-ready.
+                  Strategic Director guiding organizational growth, operational
+                  excellence, and impactful partnerships. Focused on advancing
+                  technology adoption, enhancing client success, and steering
+                  long-term vision to elevate Crescent World’s market presence
+                  across services and solutions.
                 </p>
+                <motion.a
+                  href="https://www.linkedin.com/in/chinmayushah/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="linkedin-link"
+                  whileHover={{ scale: 1.15 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <FaLinkedinIn />
+                </motion.a>
               </motion.div>
             </Col>
           </Row>
+        </Container>
+      </section>
+
+      {/* who we are Section */}
+      <Whoiam />
+
+      <section className="founders-philosophy">
+        <Container>
+          {/* HEADER */}
+          <motion.div
+            className="text-center mb-5"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={{ visible: { transition: { staggerChildren: 0.2 } } }}
+          >
+            <motion.h2 className="section-title" variants={fadeUp}>
+              Founders - Visionaries Behind Crescent World
+            </motion.h2>
+
+            <motion.p
+              className="section-subtitle funnel-sans"
+              variants={fadeUp}
+            >
+              At the heart of Crescent World are the visionaries whose
+              leadership has shaped the company’s journey.
+            </motion.p>
+          </motion.div>
+
+          {/* PHILOSOPHY CARDS */}
+          <Row className="gy-4 mb-5">
+            {principles.map((item, index) => (
+              <Col md={6} lg={4} key={index}>
+                <motion.div
+                  className="philosophy-card"
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.15, duration: 0.7 }}
+                  whileHover={{ y: -8 }}
+                  viewport={{ once: true }}
+                >
+                  <div className="icon">{item.icon}</div>
+                  <h5 className="sf-pro-font">{item.title}</h5>
+                  <p className="funnel-sans">{item.text}</p>
+                </motion.div>
+              </Col>
+            ))}
+          </Row>
+
+          {/* FOOTER TEXT */}
+          <motion.p
+            className="philosophy-footer text-center funnel-sans"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            Their belief in <strong>quality over shortcuts</strong>,{" "}
+            <strong>long-term thinking over temporary wins</strong>, and{" "}
+            <strong>shared success over individual gain</strong> laid the
+            foundation for everything Crescent World has become.
+          </motion.p>
         </Container>
       </section>
 
@@ -248,20 +435,24 @@ export default function AboutUs() {
           <Row className="align-items-center gy-4">
             <Col lg={6}>
               <img
-                src="https://images.unsplash.com/photo-1507679799987-c73779587ccf"
+                src="./images/about.jpg"
                 alt="Leadership"
                 className="img-fluid leader-img"
               />
             </Col>
             <Col lg={6}>
-              <h2 className="section-title">Business-Led Technology</h2>
-              <p className="section-text">
-                We understand startups, enterprises, timelines, budgets,
-                scalability, and real-world business pressure.
+              <h2 className="section-title sf-pro-font">Who We Are Today</h2>
+              <p className="section-text funnel-sans">
+                Crescent World is more than a business - it’s a community of
+                thinkers, makers, creators, and collaborators. We are rooted in
+                legacy, driven by purpose, and energized by the belief that
+                innovation, when guided by integrity and care, creates lasting
+                value.
               </p>
-              <p className="section-text">
-                Our solutions are designed to grow with your business — not slow
-                it down.
+              <p className="section-text funnel-sans">
+                Whether it’s technology solutions, industry partnerships, or
+                future ventures, we bring experience with heart — and ambition
+                with responsibility.
               </p>
             </Col>
           </Row>
@@ -270,7 +461,7 @@ export default function AboutUs() {
 
       {/* founder viedo */}
 
-      <section className="video-section">
+      {/* <section className="video-section">
         <Container>
           <Row className="align-items-center gy-5">
             <Col lg={6}>
@@ -305,7 +496,7 @@ export default function AboutUs() {
             </Col>
           </Row>
         </Container>
-      </section>
+      </section> */}
 
       {/* SERVICES */}
       <section className="services-section">
@@ -316,26 +507,42 @@ export default function AboutUs() {
             viewport={{ once: true }}
             variants={stagger}
           >
-            <motion.h2 className="section-title text-center" variants={fadeUp}>
+            <motion.h2
+              className="section-title text-center sf-pro-font"
+              variants={fadeUp}
+            >
               What We Do
             </motion.h2>
 
             <Row className="gy-4 mt-4">
               {[
-                "IT Consulting",
-                "Web & App Development",
-                "Cloud & DevOps",
-                "UI/UX & Performance",
+                {
+                  title: "Apple Enterprise IT",
+                  desc: "Helping enterprises, education, and government organizations integrate Apple devices seamlessly into their IT ecosystem.",
+                },
+                {
+                  title: "Enterprise IT Solutions",
+                  desc: "From Apple IT integration to high-performance servers and network security, we ensure seamless enterprise operations.",
+                },
+                {
+                  title: "Smart Living & Security",
+                  desc: "Enhance your lifestyle with cutting-edge home automation, AI-powered security systems, and advanced surveillance technology.",
+                },
+                {
+                  title: "Semiconductor Solutions",
+                  desc: "From microcontrollers to power semiconductors, we provide cutting-edge electronic components for next-gen innovation.",
+                },
+                {
+                  title: "Luxury Electronic Gadgets",
+                  desc: "Experience innovation and elegance with high-end gadgets designed to enhance your tech lifestyle.",
+                },
               ].map((service, i) => (
-                <Col md={6} lg={3} key={i}>
+                <Col md={6} lg={6} key={i}>
                   <motion.div variants={fadeUp}>
-                    <Card className="service-card">
+                    <Card className="service-card h-100">
                       <Card.Body>
-                        <h5>{service}</h5>
-                        <p>
-                          Scalable, secure, and future-ready technology
-                          solutions.
-                        </p>
+                        <h5 className="sf-pro-font">{service.title}</h5>
+                        <p className="funnel-sans">{service.desc}</p>
                       </Card.Body>
                     </Card>
                   </motion.div>
@@ -356,18 +563,18 @@ export default function AboutUs() {
             variants={{ visible: { transition: { staggerChildren: 0.2 } } }}
           >
             <motion.h2 className="section-title text-center" variants={fadeUp}>
-              How We Think
+              Why We Exist
             </motion.h2>
 
             <motion.p
-              className="section-subtitle text-center mb-5"
+              className="section-subtitle text-center funnel-sans"
               variants={fadeUp}
             >
-              Our consulting approach is driven by clarity, speed, and long-term
-              impact
+              We exist to build solutions that matter - not just products, but
+              positive impact for businesses, people, and society.
             </motion.p>
 
-            <Row className="gy-4">
+            {/* <Row className="gy-4">
               {[
                 {
                   title: "Business First",
@@ -393,7 +600,7 @@ export default function AboutUs() {
                   </motion.div>
                 </Col>
               ))}
-            </Row>
+            </Row> */}
           </motion.div>
         </Container>
       </section>
@@ -401,12 +608,14 @@ export default function AboutUs() {
       {/* CTA */}
       <section className="cta-section text-center">
         <Container>
-          <h2>Let’s Build Something Impactful</h2>
-          <p>
+          <h2 className="sf-pro-font">Let’s Build Something Impactful</h2>
+          <p className="funnel-sans">
             Partner with an IT consulting team that understands business,
             growth, and scale.
           </p>
-          <Button className="cta-btn">Contact Us</Button>
+          <NavLink to="/contact">
+            <Button className="cta-btn">Contact Us</Button>
+          </NavLink>
         </Container>
       </section>
 
@@ -414,4 +623,5 @@ export default function AboutUs() {
       <Footer />
     </div>
   );
-}
+};
+export default Aboutus;

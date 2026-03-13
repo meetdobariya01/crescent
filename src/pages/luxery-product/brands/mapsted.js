@@ -136,7 +136,7 @@ const Mapsted = () => {
                 >
                   <h3 className="sf-pro-font gradient-text">{item.title}</h3>
                   <h4>{item.word}</h4>
-                  <p>{item.text}</p>
+                  <p className="text-format">{item.text}</p>
                   {/* <p className="mt-3">{item.text2}</p> */}
                 </motion.div>
               </div>

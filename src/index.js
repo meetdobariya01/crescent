@@ -19,6 +19,7 @@ import Mapsted from "./pages/luxery-product/brands/mapsted";
 import Convergence from "./pages/convergence/convergence";
 import Immresive from "./pages/immresive/immresive";
 import AboutUs from "./pages/aboutus/aboutus";
+import Software from "./pages/software/software";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -37,6 +38,7 @@ root.render(
       <Route path="/mapsted" element={<Mapsted />} />
       <Route path="/convergence" element={<Convergence />} />
       <Route path="/immresive" element={<Immresive />} />
+      <Route path="/software" element={<Software />} />
     </Routes>
   </Router>,
 );

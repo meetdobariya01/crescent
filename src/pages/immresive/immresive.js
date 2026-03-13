@@ -1,4 +1,5 @@
-import React from "react";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { Container, Row, Col } from "react-bootstrap";
 import { motion } from "framer-motion";
 import "./immresive.css";
@@ -30,6 +31,15 @@ const floatingGlow = {
 };
 
 const Immresive = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "instant", // or "smooth"
+    });
+  }, [pathname]);
   return (
     <div className="immersive-page">
       <Header />
@@ -43,7 +53,12 @@ const Immresive = () => {
             animate="animate"
           />
 
-          <motion.h1 variants={fadeUp} initial="hidden" animate="visible">
+          <motion.h1
+            variants={fadeUp}
+            initial="hidden"
+            animate="visible"
+            className="sf-pro-font"
+          >
             Immersive Technology Solutions
           </motion.h1>
 
@@ -52,6 +67,7 @@ const Immresive = () => {
             initial="hidden"
             animate="visible"
             transition={{ delay: 0.2 }}
+            className="hero-subtitle funnel-sans"
           >
             Transforming Spaces into Experiences
           </motion.h2>
@@ -61,6 +77,7 @@ const Immresive = () => {
             initial="hidden"
             animate="visible"
             transition={{ delay: 0.4 }}
+            className="funnel-sans"
           >
             At Crescent World, our Immersive Technology Solutions blend advanced
             hardware, intelligent software, and sensory engineering to create
@@ -88,7 +105,7 @@ const Immresive = () => {
       <section className="immersive-section">
         <Container>
           <motion.h3
-            className="section-title text-center"
+            className="section-title text-center sf-pro-font "
             variants={fadeUp}
             initial="hidden"
             whileInView="visible"
@@ -141,8 +158,8 @@ const Immresive = () => {
               ].map((item, index) => (
                 <Col md={6} lg={4} key={index} className="mb-4">
                   <motion.div className="immersive-card" variants={fadeUp}>
-                    <h5>{item[0]}</h5>
-                    <p>{item[1]}</p>
+                    <h5 className="sf-pro-font">{item[0]}</h5>
+                    <p className="funnel-sans">{item[1]}</p>
                   </motion.div>
                 </Col>
               ))}
@@ -159,11 +176,12 @@ const Immresive = () => {
               <motion.h3
                 initial={{ opacity: 0, x: -80 }}
                 whileInView={{ opacity: 1, x: 0 }}
+                className="sf-pro-font"
               >
                 Advanced Immersive Technology Stack
               </motion.h3>
 
-              <motion.p className="mt-3">
+              <motion.p className="mt-3 funnel-sans">
                 Our immersive technology stack delivers highly realistic,
                 responsive, and deeply engaging environments.
               </motion.p>
@@ -179,7 +197,7 @@ const Immresive = () => {
                 whileInView={{ opacity: 1, x: 0 }}
               />
 
-              <motion.ul className="immersive-tech-list">
+              <motion.ul className="immersive-tech-list funnel-sans">
                 <li>
                   <strong>LiDAR Sensors</strong> for spatial accuracy and motion
                   tracking
@@ -203,7 +221,7 @@ const Immresive = () => {
       <section className="immersive-section">
         <Container>
           <motion.h3
-            className="section-title text-center mb-5"
+            className="section-title text-center my-5 sf-pro-font"
             variants={fadeUp}
             initial="hidden"
             whileInView="visible"
@@ -248,8 +266,8 @@ const Immresive = () => {
                   transition={{ duration: 0.55, delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
-                  <h5 className="mb-2">{item.title}</h5>
-                  <p className="mb-0">{item.desc}</p>
+                  <h5 className="mb-2 sf-pro-font">{item.title}</h5>
+                  <p className="mb-0 funnel-sans">{item.desc}</p>
                 </motion.div>
               </Col>
             ))}
@@ -264,8 +282,9 @@ const Immresive = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
+            className="sf-pro-font"
           >
-            Why Crescent World
+            Why <span className="gradient-text">Crescent World</span> ?
           </motion.h3>
 
           <motion.p
@@ -273,6 +292,7 @@ const Immresive = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
             viewport={{ once: true }}
+            className="mt-3 funnel-sans"
           >
             From concept design and engineering to installation and long-term
             support, Crescent World delivers immersive environments built for

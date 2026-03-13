@@ -12,7 +12,7 @@ const data = [
   {
     title: "Newline - Smart Displays",
     word: "Collaboration, reimagined.",
-    text: "Newline smart displays are designed for modern collaboration and interactive communication. With large-format touchscreens, high-resolution visuals, and seamless wireless connectivity, Newline transforms meeting rooms, classrooms, and hybrid workspaces. Built for simplicity and reliability, these displays enable effortless content sharing, real-time collaboration, and engaging presentations—without complexity.",
+    text: "Newline smart displays are designed for modern collaboration and interactive communication. With large-format touchscreens, high-resolution visuals, and seamless wireless connectivity, Newline transforms meeting rooms, classrooms, and hybrid workspaces. Built for simplicity and reliability, these displays enable effortless content sharing, real-time collaboration, and engaging presentations-without complexity.",
     img: "./images/brands/newline.jpeg",
     list1: "Boardrooms & meeting rooms",
     list2: "Training rooms & classrooms",
@@ -37,7 +37,7 @@ const data = [
   {
     title: "Seenspire - Digital Signage",
     word: "Content that speaks for you.",
-    text: "Seenspire is a content-driven digital signage platform that keeps screens relevant, engaging, and professional—without design effort. With 200+ curated content feeds and seamless integration with workplace tools and social platforms, Seenspire ensures your displays stay dynamic and informative. Everything is automatically formatted for a clean, consistent look across all screens.",
+    text: "Seenspire is a content-driven digital signage platform that keeps screens relevant, engaging, and professional-without design effort. With 200+ curated content feeds and seamless integration with workplace tools and social platforms, Seenspire ensures your displays stay dynamic and informative. Everything is automatically formatted for a clean, consistent look across all screens.",
     img: "./images/brands/seenspire.jpeg",
     list1: "Corporate offices & lobbies",
     list2: "Hospitality & coworking spaces",
@@ -165,7 +165,7 @@ const Luxery = () => {
                   <h4 className="gradient-text mb-3 sf-pro-font ">
                     {item.word}
                   </h4>
-                  <p className="craft-text funnel-sans">{item.text}</p>
+                  <p className="craft-text funnel-sans text-format">{item.text}</p>
                 </motion.div>
               </Col>
 

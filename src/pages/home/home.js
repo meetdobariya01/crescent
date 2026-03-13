@@ -29,9 +29,6 @@ const Home = () => {
       {/* What We Do Section */}
       <Whatwedo />
 
-      {/* who we are Section */}
-      <Whoiam />
-
       {/* Video Section */}
       <Video />
 

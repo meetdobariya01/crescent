@@ -45,7 +45,9 @@
   font-size: 14.5px;
   line-height: 1.7;
 }
-
+.text-format{
+  text-align: justify;
+}
 /* Responsive */
 @media (max-width: 768px) {
   .story-content {
@@ -53,6 +55,6 @@
   }
 
   .story-img {
-    min-height: 220px;
+    min-height: auto;
   }
 }

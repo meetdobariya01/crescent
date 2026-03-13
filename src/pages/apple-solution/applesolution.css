@@ -56,6 +56,9 @@
   line-height: 1.7;
   margin: 0;
 }
+.text-format{
+  text-align: justify;
+}
 
 /* Mobile */
 @media (max-width: 768px) {
