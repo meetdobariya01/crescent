@@ -29,6 +29,7 @@ import Printers from "./pages/printers/printers";
 import Video from "./pages/video-conf/video";
 import Storage from "./pages/storage/storage";
 import Servers from "./pages/servers/servers";
+import Datacenter from "./pages/datacenter/datacenter";
 // import OTSecurity from "../../../Users/hp/Downloads/OTSecurity";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -58,6 +59,7 @@ root.render(
       <Route path="/videoandconferencing" element={<Video />} />
       <Route path="/storage" element={<Storage />} />
       <Route path="/servers" element={<Servers />} />
+      <Route path="/datacenter" element={<Datacenter />} />
     </Routes>
   </Router>,
 );

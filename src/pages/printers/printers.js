@@ -1,13 +1,40 @@
 import React, { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { motion, AnimatePresence } from "framer-motion";
-import { 
-  FaPrint, FaBolt, FaCopy, FaCamera, FaTag, FaKeyboard,
-  FaCheckCircle, FaTruck, FaTools, FaShieldAlt, FaTags, FaBriefcase,
-  FaChevronDown, FaTint, FaLayerGroup, FaCogs, FaArrowRight,
-  FaUniversity, FaHospital, FaLandmark, FaStore, FaIndustry,
-  FaHotel, FaPalette, FaWifi, FaMobileAlt, FaRetweet, FaCloud,
-  FaRunning, FaLeaf, FaLock, FaFolder, FaLink
+import {
+  FaPrint,
+  FaBolt,
+  FaCopy,
+  FaCamera,
+  FaTag,
+  FaKeyboard,
+  FaCheckCircle,
+  FaTruck,
+  FaTools,
+  FaShieldAlt,
+  FaTags,
+  FaBriefcase,
+  FaChevronDown,
+  FaTint,
+  FaLayerGroup,
+  FaCogs,
+  FaArrowRight,
+  FaUniversity,
+  FaHospital,
+  FaLandmark,
+  FaStore,
+  FaIndustry,
+  FaHotel,
+  FaPalette,
+  FaWifi,
+  FaMobileAlt,
+  FaRetweet,
+  FaCloud,
+  FaRunning,
+  FaLeaf,
+  FaLock,
+  FaFolder,
+  FaLink,
 } from "react-icons/fa";
 import "./printers.css";
 import Header from "../../components/header/header";
@@ -22,7 +49,7 @@ const Printers = () => {
     window.scrollTo({
       top: 0,
       left: 0,
-      behavior: "instant"
+      behavior: "instant",
     });
   }, []);
 
@@ -33,7 +60,11 @@ const Printers = () => {
   // Animation variants
   const fadeInUp = {
     hidden: { opacity: 0, y: 30 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
   };
 
   const staggerContainer = {
@@ -41,9 +72,9 @@ const Printers = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.15
-      }
-    }
+        staggerChildren: 0.15,
+      },
+    },
   };
 
   // Categories Data
@@ -53,81 +84,205 @@ const Printers = () => {
       icon: <FaPrint />,
       color: "rgba(6, 182, 212, 0.12)",
       indicator: "#06b6d4",
-      items: ["Home Printing", "Color Documents", "Photo Printing", "Wireless Connectivity"]
+      items: [
+        "Home Printing",
+        "Color Documents",
+        "Photo Printing",
+        "Wireless Connectivity",
+      ],
     },
     {
       title: "Laser Printers",
       icon: <FaBolt />,
       color: "rgba(217, 70, 239, 0.12)",
       indicator: "#d946ef",
-      items: ["Fast Printing", "High Volume Output", "Low Cost Per Page", "Office Ready Builds"]
+      items: [
+        "Fast Printing",
+        "High Volume Output",
+        "Low Cost Per Page",
+        "Office Ready Builds",
+      ],
     },
     {
       title: "Multifunction Printers (MFP)",
       icon: <FaCopy />,
       color: "rgba(99, 102, 241, 0.12)",
       indicator: "#6366f1",
-      items: ["High-speed Printing", "Precision Scanning", "Easy Document Copying", "Reliable Fax Solutions"]
+      items: [
+        "High-speed Printing",
+        "Precision Scanning",
+        "Easy Document Copying",
+        "Reliable Fax Solutions",
+      ],
     },
     {
       title: "Photo Printers",
       icon: <FaCamera />,
       color: "rgba(234, 179, 8, 0.12)",
       indicator: "#eab308",
-      items: ["High Resolution details", "Borderless Paper Printing", "Professional Photo Quality", "Fine-art gallery finishes"]
+      items: [
+        "High Resolution details",
+        "Borderless Paper Printing",
+        "Professional Photo Quality",
+        "Fine-art gallery finishes",
+      ],
     },
     {
       title: "Label & Barcode Printers",
       icon: <FaTag />,
       color: "rgba(16, 185, 129, 0.12)",
       indicator: "#10b981",
-      items: ["Retail checkout print", "Warehouse scan codes", "Shipping label rolls", "Inventory management ready"]
+      items: [
+        "Retail checkout print",
+        "Warehouse scan codes",
+        "Shipping label rolls",
+        "Inventory management ready",
+      ],
     },
     {
       title: "Dot Matrix Printers",
       icon: <FaKeyboard />,
       color: "rgba(100, 116, 139, 0.12)",
       indicator: "#64748b",
-      items: ["Multi-carbon Invoice Printing", "Continuous Paper feeds", "Banking transactions support", "Government Office durability"]
-    }
+      items: [
+        "Multi-carbon Invoice Printing",
+        "Continuous Paper feeds",
+        "Banking transactions support",
+        "Government Office durability",
+      ],
+    },
   ];
 
   // Supply Data
   const supplyData = {
     cartridges: [
-      { name: "Ink Cartridges", desc: "Genuine brand-locked color ink cartridges for inkjet printing, delivering vibrant, fade-resistant output.", icon: <FaTint /> },
-      { name: "Toner Cartridges", desc: "High-capacity thermal polymer powder toners for laser printers, ensuring crisp, fast, and smudge-free text.", icon: <FaTint /> },
-      { name: "Drum Units", desc: "Photoreceptor drums critical for transferring toner powder onto paper sheets during laser imaging.", icon: <FaCogs /> },
-      { name: "Imaging Units", desc: "Combined cartridge and photo drum modules designed for rapid cartridge changes in color printers.", icon: <FaCogs /> }
+      {
+        name: "Ink Cartridges",
+        desc: "Genuine brand-locked color ink cartridges for inkjet printing, delivering vibrant, fade-resistant output.",
+        icon: <FaTint />,
+      },
+      {
+        name: "Toner Cartridges",
+        desc: "High-capacity thermal polymer powder toners for laser printers, ensuring crisp, fast, and smudge-free text.",
+        icon: <FaTint />,
+      },
+      {
+        name: "Drum Units",
+        desc: "Photoreceptor drums critical for transferring toner powder onto paper sheets during laser imaging.",
+        icon: <FaCogs />,
+      },
+      {
+        name: "Imaging Units",
+        desc: "Combined cartridge and photo drum modules designed for rapid cartridge changes in color printers.",
+        icon: <FaCogs />,
+      },
     ],
     paper: [
-      { name: "Printer Paper", desc: "Premium multipurpose A4/A3 office sheets engineered for laser, copier, and inkjet operations.", icon: <FaLayerGroup /> },
-      { name: "Photo Paper", desc: "Glossy, semi-glossy, and matte-coated paper substrates optimized for rich borderless photo processing.", icon: <FaLayerGroup /> },
-      { name: "Label Rolls", desc: "Standard thermal sticky label rolls matching desktop label printers for packaging and sorting.", icon: <FaTag /> },
-      { name: "Barcode Labels", desc: "High-contrast chemical-resistant media designed for heavy industrial barcode applications.", icon: <FaTag /> }
+      {
+        name: "Printer Paper",
+        desc: "Premium multipurpose A4/A3 office sheets engineered for laser, copier, and inkjet operations.",
+        icon: <FaLayerGroup />,
+      },
+      {
+        name: "Photo Paper",
+        desc: "Glossy, semi-glossy, and matte-coated paper substrates optimized for rich borderless photo processing.",
+        icon: <FaLayerGroup />,
+      },
+      {
+        name: "Label Rolls",
+        desc: "Standard thermal sticky label rolls matching desktop label printers for packaging and sorting.",
+        icon: <FaTag />,
+      },
+      {
+        name: "Barcode Labels",
+        desc: "High-contrast chemical-resistant media designed for heavy industrial barcode applications.",
+        icon: <FaTag />,
+      },
     ],
     hardware: [
-      { name: "Maintenance Kits", desc: "All-in-one backup rollers, pickup tires, and separators to restore standard feeding stability.", icon: <FaCogs /> },
-      { name: "Fuser Units", desc: "Thermal heat rollers that apply high temperature and pressure to fuse toner particles into paper.", icon: <FaCogs /> },
-      { name: "Printer Cables & USB", desc: "Shielded high-speed USB A-to-B interface lines for instant desktop connection without interference.", icon: <FaLink /> },
-      { name: "Network Accessories", desc: "External print servers, Ethernet switches, and wireless adapters to enable local sharing.", icon: <FaWifi /> }
-    ]
+      {
+        name: "Maintenance Kits",
+        desc: "All-in-one backup rollers, pickup tires, and separators to restore standard feeding stability.",
+        icon: <FaCogs />,
+      },
+      {
+        name: "Fuser Units",
+        desc: "Thermal heat rollers that apply high temperature and pressure to fuse toner particles into paper.",
+        icon: <FaCogs />,
+      },
+      {
+        name: "Printer Cables & USB",
+        desc: "Shielded high-speed USB A-to-B interface lines for instant desktop connection without interference.",
+        icon: <FaLink />,
+      },
+      {
+        name: "Network Accessories",
+        desc: "External print servers, Ethernet switches, and wireless adapters to enable local sharing.",
+        icon: <FaWifi />,
+      },
+    ],
   };
 
   // Why Choose Us
   const whyChooseUs = [
-    { title: "Genuine Products", desc: "100% authentic printers and original consumables backed by full manufacturer guarantees.", icon: <FaCheckCircle /> },
-    { title: "Fast Delivery", desc: "Safe, secure, and rapid transit routes ensuring on-time supply deliveries across India.", icon: <FaTruck /> },
-    { title: "Expert Installation", desc: "Professional technicians ensuring seamless hardware setup, network driver linkages, and testing.", icon: <FaTools /> },
-    { title: "Manufacturer Warranty", desc: "Official product backing and hassle-free warranty support through certified channels.", icon: <FaShieldAlt /> },
-    { title: "Competitive Pricing", desc: "Affordable catalog pricing backed by volume institutional bulk purchase discounts.", icon: <FaTags /> },
-    { title: "Business Solutions", desc: "Customized managed print fleets (MPS) curated precisely for corporate environment scales.", icon: <FaBriefcase /> }
+    {
+      title: "Genuine Products",
+      desc: "100% authentic printers and original consumables backed by full manufacturer guarantees.",
+      icon: <FaCheckCircle />,
+    },
+    {
+      title: "Fast Delivery",
+      desc: "Safe, secure, and rapid transit routes ensuring on-time supply deliveries across India.",
+      icon: <FaTruck />,
+    },
+    {
+      title: "Expert Installation",
+      desc: "Professional technicians ensuring seamless hardware setup, network driver linkages, and testing.",
+      icon: <FaTools />,
+    },
+    {
+      title: "Manufacturer Warranty",
+      desc: "Official product backing and hassle-free warranty support through certified channels.",
+      icon: <FaShieldAlt />,
+    },
+    {
+      title: "Competitive Pricing",
+      desc: "Affordable catalog pricing backed by volume institutional bulk purchase discounts.",
+      icon: <FaTags />,
+    },
+    {
+      title: "Business Solutions",
+      desc: "Customized managed print fleets (MPS) curated precisely for corporate environment scales.",
+      icon: <FaBriefcase />,
+    },
   ];
 
   // Brands list
   const brandsList = [
-    "HP", "Canon", "Epson", "Brother", "Xerox", "Ricoh", "Kyocera", "Pantum", "Samsung", "Zebra", "Fujifilm", "Lexmark",
-    "HP", "Canon", "Epson", "Brother", "Xerox", "Ricoh", "Kyocera", "Pantum", "Samsung", "Zebra", "Fujifilm", "Lexmark"
+    "HP",
+    "Canon",
+    "Epson",
+    "Brother",
+    "Xerox",
+    "Ricoh",
+    "Kyocera",
+    "Pantum",
+    "Samsung",
+    "Zebra",
+    "Fujifilm",
+    "Lexmark",
+    "HP",
+    "Canon",
+    "Epson",
+    "Brother",
+    "Xerox",
+    "Ricoh",
+    "Kyocera",
+    "Pantum",
+    "Samsung",
+    "Zebra",
+    "Fujifilm",
+    "Lexmark",
   ];
 
   // Industries
@@ -141,21 +296,51 @@ const Printers = () => {
     { name: "Logistics Companies", icon: <FaTruck /> },
     { name: "Manufacturing Units", icon: <FaIndustry /> },
     { name: "Hotels", icon: <FaHotel /> },
-    { name: "Design Studios", icon: <FaPalette /> }
+    { name: "Design Studios", icon: <FaPalette /> },
   ];
 
   // Services
   const services = [
-    { title: "Printer Sales", desc: "Supplying wide arrays of commercial inkjet, laser, and industrial barcode printer configurations." },
-    { title: "Printer Installation", desc: "Ensuring accurate device unpacking, assembly, paper calibration, and test-page reviews." },
-    { title: "Network Printer Setup", desc: "Linking hardware to central office Wi-Fi, Ethernet routers, and local user laptops/PCs." },
-    { title: "Printer Repair", desc: "Prompt diagnosing, paper-jam resolution, gear replacements, and board repairs." },
-    { title: "Annual Maintenance Contracts (AMC)", desc: "Securing routine hardware cleaning, lubrication, diagnostic testing, and emergency backups." },
-    { title: "Toner & Ink Refilling", desc: "Standard, clean refilling utilizing certified chemical powders and high-grade liquid inks." },
-    { title: "Cartridge Replacement", desc: "Delivering original or premium compatible ink/toner cartridges to minimize downtime." },
-    { title: "Bulk Printer Supply", desc: "Managing inventory rollouts, replacement units, and media stock for large corporations." },
-    { title: "Managed Print Services", desc: "Analyzing usage volumes to optimize printer fleets, reduce paper waste, and cut utility costs." },
-    { title: "On-site Technical Support", desc: "Fast-dispatch technical experts resolving system errors directly in your office or facility." }
+    {
+      title: "Printer Sales",
+      desc: "Supplying wide arrays of commercial inkjet, laser, and industrial barcode printer configurations.",
+    },
+    {
+      title: "Printer Installation",
+      desc: "Ensuring accurate device unpacking, assembly, paper calibration, and test-page reviews.",
+    },
+    {
+      title: "Network Printer Setup",
+      desc: "Linking hardware to central office Wi-Fi, Ethernet routers, and local user laptops/PCs.",
+    },
+    {
+      title: "Printer Repair",
+      desc: "Prompt diagnosing, paper-jam resolution, gear replacements, and board repairs.",
+    },
+    {
+      title: "Annual Maintenance Contracts (AMC)",
+      desc: "Securing routine hardware cleaning, lubrication, diagnostic testing, and emergency backups.",
+    },
+    {
+      title: "Toner & Ink Refilling",
+      desc: "Standard, clean refilling utilizing certified chemical powders and high-grade liquid inks.",
+    },
+    {
+      title: "Cartridge Replacement",
+      desc: "Delivering original or premium compatible ink/toner cartridges to minimize downtime.",
+    },
+    {
+      title: "Bulk Printer Supply",
+      desc: "Managing inventory rollouts, replacement units, and media stock for large corporations.",
+    },
+    {
+      title: "Managed Print Services",
+      desc: "Analyzing usage volumes to optimize printer fleets, reduce paper waste, and cut utility costs.",
+    },
+    {
+      title: "On-site Technical Support",
+      desc: "Fast-dispatch technical experts resolving system errors directly in your office or facility.",
+    },
   ];
 
   // Features
@@ -169,28 +354,51 @@ const Printers = () => {
     { title: "Secure Printing", icon: <FaLock /> },
     { title: "Automatic Document Feeder (ADF)", icon: <FaFolder /> },
     { title: "USB & Ethernet Connectivity", icon: <FaLink /> },
-    { title: "Wi-Fi & Bluetooth Support", icon: <FaWifi /> }
+    { title: "Wi-Fi & Bluetooth Support", icon: <FaWifi /> },
   ];
 
   // Accessories
   const accessoriesList = [
-    "Ink Cartridges", "Toner Cartridges", "Printer Stands", "USB Cables", "Power Cables",
-    "Label Rolls", "Paper Trays", "Maintenance Kits", "Cleaning Kits", "Printer Covers"
+    "Ink Cartridges",
+    "Toner Cartridges",
+    "Printer Stands",
+    "USB Cables",
+    "Power Cables",
+    "Label Rolls",
+    "Paper Trays",
+    "Maintenance Kits",
+    "Cleaning Kits",
+    "Printer Covers",
   ];
 
   // FAQs
   const faqs = [
-    { q: "Do you sell genuine ink and toner cartridges?", a: "Yes, we provide original (OEM) brand cartridges directly from HP, Canon, Epson, and Brother, alongside premium high-quality compatible cartridges that offer cost-effective alternatives." },
-    { q: "Can you install printers at our office?", a: "Absolutely. Our expert service engineers provide complete on-site physical setup, configuration, computer driver mapping, and local network setups." },
-    { q: "Do you provide printer repair services?", a: "Yes, we offer both on-demand repair visits and long-term Annual Maintenance Contracts (AMC) to resolve paper jams, print quality defects, and mechanical issues." },
-    { q: "Do you offer bulk pricing?", a: "Yes, we provide customized institutional pricing models and volume discounts for corporate environments, schools, universities, and government operations." },
-    { q: "Do printers come with warranty?", a: "Yes, all eligible brand printers sold through Crescent carry official manufacturer warranties, and our help desk assists you in registering and processing claims." }
+    {
+      q: "Do you sell genuine ink and toner cartridges?",
+      a: "Yes, we provide original (OEM) brand cartridges directly from HP, Canon, Epson, and Brother, alongside premium high-quality compatible cartridges that offer cost-effective alternatives.",
+    },
+    {
+      q: "Can you install printers at our office?",
+      a: "Absolutely. Our expert service engineers provide complete on-site physical setup, configuration, computer driver mapping, and local network setups.",
+    },
+    {
+      q: "Do you provide printer repair services?",
+      a: "Yes, we offer both on-demand repair visits and long-term Annual Maintenance Contracts (AMC) to resolve paper jams, print quality defects, and mechanical issues.",
+    },
+    {
+      q: "Do you offer bulk pricing?",
+      a: "Yes, we provide customized institutional pricing models and volume discounts for corporate environments, schools, universities, and government operations.",
+    },
+    {
+      q: "Do printers come with warranty?",
+      a: "Yes, all eligible brand printers sold through Crescent carry official manufacturer warranties, and our help desk assists you in registering and processing claims.",
+    },
   ];
 
   return (
     <div className="printers-page">
       <Header />
-      
+
       {/* CMYK Background Glow Accents */}
       <div className="glow-spot glow-spot-cyan"></div>
       <div className="glow-spot glow-spot-magenta"></div>
@@ -210,18 +418,27 @@ const Printers = () => {
                 <span className="badge-premium-printers">
                   🖨️ Crescent Printers & Consumables
                 </span>
-                <h1 className="hero-title sf-pro-font">
+                <h1 className="hero-title-printers sf-pro-font">
                   Professional Printers <br />
                   <span>& Printing Supplies</span>
                 </h1>
-                <p className="hero-subtitle funnel-sans">
-                  Discover high-quality printers, multifunction devices, scanners, and genuine printing supplies from the world's leading brands for home, office, education, and enterprise needs.
+                <p className="hero-subtitle-printers funnel-sans">
+                  Discover high-quality printers, multifunction devices,
+                  scanners, and genuine printing supplies from the world's
+                  leading brands for home, office, education, and enterprise
+                  needs.
                 </p>
                 <div className="cta-group">
-                  <a href="#categories" className="btn-premium-cyan funnel-sans">
+                  <a
+                    href="#categories"
+                    className="btn-premium-cyan funnel-sans"
+                  >
                     Shop Printers <FaArrowRight />
                   </a>
-                  <a href="/contact" className="btn-premium-outline funnel-sans">
+                  <a
+                    href="/contact"
+                    className="btn-premium-outline funnel-sans"
+                  >
                     Request a Quote
                   </a>
                   <a href="/contact" className="btn-premium-text funnel-sans">
@@ -238,9 +455,9 @@ const Printers = () => {
                 transition={{ duration: 0.9, delay: 0.2 }}
               >
                 <div className="hero-image-glow"></div>
-                <img 
-                  src="/images/premium_printer_hero.png" 
-                  alt="Premium Office Multifunction Printer" 
+                <img
+                  src="/images/premium_printer_hero.png"
+                  alt="Premium Office Multifunction Printer"
                   className="hero-img img-fluid"
                 />
                 <div className="floating-stats-card">
@@ -282,17 +499,27 @@ const Printers = () => {
                 viewport={{ once: true, margin: "-100px" }}
                 variants={fadeInUp}
               >
-                <span className="section-tag sf-medium-font">All-In-One Hardware</span>
+                <span className="section-tag sf-medium-font">
+                  All-In-One Hardware
+                </span>
                 <h2 className="section-title sf-pro-font text-start mb-4">
                   About Our Printing Solutions
                 </h2>
-                <p className="funnel-sans text-secondary" style={{ fontSize: "1.1rem", lineHeight: "1.7" }}>
-                  We provide reliable printing solutions for businesses, educational institutions, government organizations, and home users. From compact home printers to enterprise multifunction devices, we offer genuine products, expert consultation, installation, and ongoing support to meet every printing requirement.
+                <p
+                  className="funnel-sans text-secondary"
+                  style={{ fontSize: "1.1rem", lineHeight: "1.7" }}
+                >
+                  We provide reliable printing solutions for businesses,
+                  educational institutions, government organizations, and home
+                  users. From compact home printers to enterprise multifunction
+                  devices, we offer genuine products, expert consultation,
+                  installation, and ongoing support to meet every printing
+                  requirement.
                 </p>
               </motion.div>
             </Col>
             <Col lg={6}>
-              <motion.div 
+              <motion.div
                 className="about-features"
                 variants={staggerContainer}
                 initial="hidden"
@@ -301,23 +528,42 @@ const Printers = () => {
               >
                 <div className="about-feat-item">
                   <div className="about-feat-icon">🏢</div>
-                  <div className="about-feat-title sf-pro-font">Corporate Fleets</div>
-                  <div className="about-feat-text">High-capacity laser engines for heavy office printing volume.</div>
+                  <div className="about-feat-title sf-pro-font">
+                    Corporate Fleets
+                  </div>
+                  <div className="about-feat-text">
+                    High-capacity laser engines for heavy office printing
+                    volume.
+                  </div>
                 </div>
                 <div className="about-feat-item">
                   <div className="about-feat-icon">🏠</div>
-                  <div className="about-feat-title sf-pro-font">Home & Student</div>
-                  <div className="about-feat-text">Compact ink tank layouts with Wi-Fi wireless setups.</div>
+                  <div className="about-feat-title sf-pro-font">
+                    Home & Student
+                  </div>
+                  <div className="about-feat-text">
+                    Compact ink tank layouts with Wi-Fi wireless setups.
+                  </div>
                 </div>
                 <div className="about-feat-item">
                   <div className="about-feat-icon">🎒</div>
-                  <div className="about-feat-title sf-pro-font">Educational Centers</div>
-                  <div className="about-feat-text">High volume duplex units with secure badge log-in structures.</div>
+                  <div className="about-feat-title sf-pro-font">
+                    Educational Centers
+                  </div>
+                  <div className="about-feat-text">
+                    High volume duplex units with secure badge log-in
+                    structures.
+                  </div>
                 </div>
                 <div className="about-feat-item">
                   <div className="about-feat-icon">🔧</div>
-                  <div className="about-feat-title sf-pro-font">Expert Assistance</div>
-                  <div className="about-feat-text">Continuous AMC support, component repairs, and toner replacement.</div>
+                  <div className="about-feat-title sf-pro-font">
+                    Expert Assistance
+                  </div>
+                  <div className="about-feat-text">
+                    Continuous AMC support, component repairs, and toner
+                    replacement.
+                  </div>
                 </div>
               </motion.div>
             </Col>
@@ -332,10 +578,11 @@ const Printers = () => {
             <span className="section-tag sf-medium-font">Engineered Types</span>
             <h2 className="section-title sf-pro-font">Printer Categories</h2>
             <p className="section-subtitle">
-              Select standard hardware form factors designed for speed, media variety, and resolution.
+              Select standard hardware form factors designed for speed, media
+              variety, and resolution.
             </p>
           </div>
-          
+
           <motion.div
             variants={staggerContainer}
             initial="hidden"
@@ -345,20 +592,25 @@ const Printers = () => {
             <Row className="gy-4">
               {categories.map((cat, idx) => (
                 <Col lg={4} md={6} key={idx}>
-                  <motion.div 
+                  <motion.div
                     className="category-card"
                     variants={fadeInUp}
                     style={{
                       "--card-glow-color": cat.color,
-                      "--card-glow-indicator": cat.indicator
+                      "--card-glow-indicator": cat.indicator,
                     }}
                   >
                     <div className="category-card-glow"></div>
                     <div>
-                      <div className="category-icon" style={{ color: cat.indicator }}>
+                      <div
+                        className="category-icon"
+                        style={{ color: cat.indicator }}
+                      >
                         {cat.icon}
                       </div>
-                      <h3 className="category-title sf-pro-font">{cat.title}</h3>
+                      <h3 className="category-title sf-pro-font">
+                        {cat.title}
+                      </h3>
                       <ul className="category-list funnel-sans">
                         {cat.items.map((item, itemIdx) => (
                           <li key={itemIdx}>{item}</li>
@@ -380,27 +632,30 @@ const Printers = () => {
       <section className="supplies-section">
         <Container>
           <div className="section-title-wrap">
-            <span className="section-tag sf-medium-font">Consumables & Media</span>
+            <span className="section-tag sf-medium-font">
+              Consumables & Media
+            </span>
             <h2 className="section-title sf-pro-font">Printer Supplies</h2>
             <p className="section-subtitle">
-              We provide genuine and compatible printing supplies for all major printer brands.
+              We provide genuine and compatible printing supplies for all major
+              printer brands.
             </p>
           </div>
 
           <div className="supplies-tab-list">
-            <button 
+            <button
               className={`btn-supply-tab funnel-sans ${activeSupplyTab === "cartridges" ? "active" : ""}`}
               onClick={() => setActiveSupplyTab("cartridges")}
             >
               Cartridges & Consumables
             </button>
-            <button 
+            <button
               className={`btn-supply-tab funnel-sans ${activeSupplyTab === "paper" ? "active" : ""}`}
               onClick={() => setActiveSupplyTab("paper")}
             >
               Paper & Label Media
             </button>
-            <button 
+            <button
               className={`btn-supply-tab funnel-sans ${activeSupplyTab === "hardware" ? "active" : ""}`}
               onClick={() => setActiveSupplyTab("hardware")}
             >
@@ -433,10 +688,13 @@ const Printers = () => {
       <section className="why-section">
         <Container>
           <div className="section-title-wrap">
-            <span className="section-tag sf-medium-font">Crescent Standards</span>
+            <span className="section-tag sf-medium-font">
+              Crescent Standards
+            </span>
             <h2 className="section-title sf-pro-font">Why Choose Us?</h2>
             <p className="section-subtitle">
-              Authentic products, secure logistics, certified engineers, and customized fleet configurations.
+              Authentic products, secure logistics, certified engineers, and
+              customized fleet configurations.
             </p>
           </div>
 
@@ -449,10 +707,7 @@ const Printers = () => {
             <Row className="gy-4">
               {whyChooseUs.map((feat, idx) => (
                 <Col lg={4} md={6} key={idx}>
-                  <motion.div 
-                    className="why-card"
-                    variants={fadeInUp}
-                  >
+                  <motion.div className="why-card" variants={fadeInUp}>
                     <div className="why-icon">{feat.icon}</div>
                     <h3 className="why-title sf-pro-font">{feat.title}</h3>
                     <p className="why-text funnel-sans">{feat.desc}</p>
@@ -471,23 +726,30 @@ const Printers = () => {
             <span className="section-tag sf-medium-font">Smart Functions</span>
             <h2 className="section-title sf-pro-font">Printer Features</h2>
             <p className="section-subtitle">
-              Modern printing components engineered for workflow speed and data privacy.
+              Modern printing components engineered for workflow speed and data
+              privacy.
             </p>
           </div>
 
           <Row className="gy-4">
             {featuresList.map((feat, index) => (
               <Col lg={4} md={6} key={index}>
-                <motion.div 
+                <motion.div
                   className="feature-box"
                   whileHover={{ scale: 1.03, y: -2 }}
                   transition={{ type: "spring", stiffness: 300 }}
                 >
                   <div className="feature-icon-badge">{feat.icon}</div>
                   <div>
-                    <h4 className="feature-title-text sf-medium-font">{feat.title}</h4>
-                    <p className="text-secondary mb-0" style={{ fontSize: "0.85rem" }}>
-                      Curated hardware specification built for network stability.
+                    <h4 className="feature-title-text sf-medium-font">
+                      {feat.title}
+                    </h4>
+                    <p
+                      className="text-secondary mb-0"
+                      style={{ fontSize: "0.85rem" }}
+                    >
+                      Curated hardware specification built for network
+                      stability.
                     </p>
                   </div>
                 </motion.div>
@@ -498,13 +760,19 @@ const Printers = () => {
       </section>
 
       {/* Accessories Section */}
-      <section className="why-section" style={{ background: "var(--bg-primary)" }}>
+      <section
+        className="why-section"
+        style={{ background: "var(--bg-primary)" }}
+      >
         <Container>
           <div className="section-title-wrap">
-            <span className="section-tag sf-medium-font">System Accessories</span>
+            <span className="section-tag sf-medium-font">
+              System Accessories
+            </span>
             <h2 className="section-title sf-pro-font">Accessories We Offer</h2>
             <p className="section-subtitle">
-              Enhance hardware efficiency with durable trays, stands, replacement cables, and covers.
+              Enhance hardware efficiency with durable trays, stands,
+              replacement cables, and covers.
             </p>
           </div>
 
@@ -516,7 +784,12 @@ const Printers = () => {
                 whileHover={{ scale: 1.05, y: -4 }}
                 transition={{ type: "spring", stiffness: 200 }}
               >
-                <span className="industry-icon" style={{ color: "var(--color-cyan)" }}>⚙️</span>
+                <span
+                  className="industry-icon"
+                  style={{ color: "var(--color-cyan)" }}
+                >
+                  ⚙️
+                </span>
                 <span className="industry-name sf-medium-font">{acc}</span>
               </motion.div>
             ))}
@@ -528,10 +801,13 @@ const Printers = () => {
       <section className="industries-section">
         <Container>
           <div className="section-title-wrap">
-            <span className="section-tag sf-medium-font">Sector Implementations</span>
+            <span className="section-tag sf-medium-font">
+              Sector Implementations
+            </span>
             <h2 className="section-title sf-pro-font">Industries We Serve</h2>
             <p className="section-subtitle">
-              We deploy printing solutions meeting document formatting requirements across diverse verticals.
+              We deploy printing solutions meeting document formatting
+              requirements across diverse verticals.
             </p>
           </div>
 
@@ -561,10 +837,13 @@ const Printers = () => {
       <section className="services-section">
         <Container>
           <div className="section-title-wrap">
-            <span className="section-tag sf-medium-font">Complete Cycle Support</span>
+            <span className="section-tag sf-medium-font">
+              Complete Cycle Support
+            </span>
             <h2 className="section-title sf-pro-font">Our Services</h2>
             <p className="section-subtitle">
-              From sales installation to routine cartridge maintenance, refilling, and fleet optimization.
+              From sales installation to routine cartridge maintenance,
+              refilling, and fleet optimization.
             </p>
           </div>
 
@@ -577,16 +856,18 @@ const Printers = () => {
             <Row className="gy-4">
               {services.map((service, idx) => (
                 <Col lg={6} key={idx}>
-                  <motion.div 
-                    className="service-card"
-                    variants={fadeInUp}
-                  >
+                  <motion.div className="service-card" variants={fadeInUp}>
                     <div className="service-num sf-pro-font">
                       {(idx + 1).toString().padStart(2, "0")}
                     </div>
                     <div className="service-content">
-                      <h3 className="service-title sf-pro-font">{service.title}</h3>
-                      <p className="funnel-sans text-secondary mb-0" style={{ fontSize: "0.95rem" }}>
+                      <h3 className="service-title sf-pro-font">
+                        {service.title}
+                      </h3>
+                      <p
+                        className="funnel-sans text-secondary mb-0"
+                        style={{ fontSize: "0.95rem" }}
+                      >
                         {service.desc}
                       </p>
                     </div>
@@ -603,9 +884,12 @@ const Printers = () => {
         <Container>
           <div className="section-title-wrap">
             <span className="section-tag sf-medium-font">FAQ Info</span>
-            <h2 className="section-title sf-pro-font">Frequently Asked Questions</h2>
+            <h2 className="section-title sf-pro-font">
+              Frequently Asked Questions
+            </h2>
             <p className="section-subtitle">
-              Quick answers about printing configurations, installations, cartridge refilling, and warranties.
+              Quick answers about printing configurations, installations,
+              cartridge refilling, and warranties.
             </p>
           </div>
 
@@ -613,8 +897,8 @@ const Printers = () => {
             {faqs.map((faq, index) => {
               const isActive = openFaq === index;
               return (
-                <div 
-                  key={index} 
+                <div
+                  key={index}
                   className={`faq-item ${isActive ? "active" : ""}`}
                   onClick={() => toggleFaq(index)}
                 >
@@ -632,9 +916,7 @@ const Printers = () => {
                         exit={{ height: 0, opacity: 0 }}
                         transition={{ duration: 0.3, ease: "easeInOut" }}
                       >
-                        <div className="faq-body funnel-sans">
-                          {faq.a}
-                        </div>
+                        <div className="faq-body funnel-sans">{faq.a}</div>
                       </motion.div>
                     )}
                   </AnimatePresence>

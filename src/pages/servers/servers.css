@@ -8,25 +8,29 @@
   --bg-secondary: #ffffff;
   --text-primary: #0f172a;
   --text-secondary: #475569;
-  
-  --color-primary: #2563eb;      /* Luminous Blue */
-  --color-secondary: #7c3aed;    /* Luminous Purple */
-  --color-cyan: #0891b2;         /* Prism Cyan */
-  --color-teal: #0d9488;         /* Emerald Teal */
-  
+
+  --color-primary: #2563eb; /* Luminous Blue */
+  --color-secondary: #7c3aed; /* Luminous Purple */
+  --color-cyan: #0891b2; /* Prism Cyan */
+  --color-teal: #0d9488; /* Emerald Teal */
+
   --gradient-text: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
   --gradient-luminous: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
   --gradient-cyan: linear-gradient(135deg, #0891b2 0%, #0d9488 100%);
-  --gradient-glass: linear-gradient(135deg, rgba(255, 255, 255, 0.75) 0%, rgba(255, 255, 255, 0.45) 100%);
-  
+  --gradient-glass: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.75) 0%,
+    rgba(255, 255, 255, 0.45) 100%
+  );
+
   --border-radius-sm: 12px;
   --border-radius-md: 20px;
   --border-radius-lg: 32px;
-  
+
   --shadow-premium: 0 10px 30px -10px rgba(15, 23, 42, 0.05);
   --shadow-glow-blue: 0 8px 30px rgba(37, 99, 235, 0.15);
   --shadow-glow-purple: 0 8px 30px rgba(124, 58, 237, 0.15);
-  
+
   --transition-smooth: all 0.45s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -37,7 +41,7 @@
   font-family: "Funnel Sans", sans-serif;
   overflow-x: hidden;
   position: relative;
-  padding-bottom: 5rem;
+  /* padding-bottom: 5rem; */
 }
 
 /* Background Luminous Glow Spots */
@@ -55,25 +59,45 @@
 .glow-spot-1 {
   top: 5%;
   right: -5%;
-  background: radial-gradient(circle, rgba(8, 145, 178, 0.18) 0%, rgba(37, 99, 235, 0.05) 70%, transparent 100%);
+  background: radial-gradient(
+    circle,
+    rgba(8, 145, 178, 0.18) 0%,
+    rgba(37, 99, 235, 0.05) 70%,
+    transparent 100%
+  );
 }
 
 .glow-spot-2 {
   top: 30%;
   left: -10%;
-  background: radial-gradient(circle, rgba(124, 58, 237, 0.18) 0%, rgba(8, 145, 178, 0.05) 70%, transparent 100%);
+  background: radial-gradient(
+    circle,
+    rgba(124, 58, 237, 0.18) 0%,
+    rgba(8, 145, 178, 0.05) 70%,
+    transparent 100%
+  );
 }
 
 .glow-spot-3 {
   top: 55%;
   right: -10%;
-  background: radial-gradient(circle, rgba(37, 99, 235, 0.15) 0%, rgba(124, 58, 237, 0.04) 70%, transparent 100%);
+  background: radial-gradient(
+    circle,
+    rgba(37, 99, 235, 0.15) 0%,
+    rgba(124, 58, 237, 0.04) 70%,
+    transparent 100%
+  );
 }
 
 .glow-spot-4 {
   bottom: 10%;
   left: 5%;
-  background: radial-gradient(circle, rgba(8, 145, 178, 0.15) 0%, rgba(37, 99, 235, 0.03) 70%, transparent 100%);
+  background: radial-gradient(
+    circle,
+    rgba(8, 145, 178, 0.15) 0%,
+    rgba(37, 99, 235, 0.03) 70%,
+    transparent 100%
+  );
 }
 
 /* Hero Section */
@@ -238,7 +262,11 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(8, 145, 178, 0.1) 0%, rgba(124, 58, 237, 0.1) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(8, 145, 178, 0.1) 0%,
+    rgba(124, 58, 237, 0.1) 100%
+  );
   pointer-events: none;
   mix-blend-mode: color-dodge;
 }
@@ -449,7 +477,12 @@
   padding: 5rem 0;
   position: relative;
   z-index: 1;
-  background: linear-gradient(180deg, transparent 0%, rgba(37, 99, 235, 0.02) 50%, transparent 100%);
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(37, 99, 235, 0.02) 50%,
+    transparent 100%
+  );
 }
 
 .marquee-container {
@@ -556,13 +589,21 @@
 }
 
 @keyframes marquee {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 @keyframes marquee-reverse {
-  0% { transform: translateX(-50%); }
-  100% { transform: translateX(0); }
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 
 /* Why Choose Us Section */
@@ -885,7 +926,9 @@
     flex-direction: column;
     align-items: stretch;
   }
-  .btn-premium-primary, .btn-premium-secondary, .btn-premium-outline {
+  .btn-premium-primary,
+  .btn-premium-secondary,
+  .btn-premium-outline {
     justify-content: center;
   }
   .brand-grid {

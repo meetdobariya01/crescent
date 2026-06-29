@@ -55,6 +55,10 @@ const Header = () => {
                     name: "Computers",
                     path: "/computers",
                   },
+                   {
+                    name: "Data Center",
+                    path: "/datacenter",
+                  },
 
                   {
                     name: "Printers & Supplies",
@@ -72,6 +76,7 @@ const Header = () => {
                     name: "Servers & Server Management",
                     path: "/servers",
                   },
+                 
                 ],
               },
               { name: "Convergence", path: "/convergence" },

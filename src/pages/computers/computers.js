@@ -190,7 +190,7 @@ const Computers = () => {
                   Premium Computers <br />
                   <span>for Every Need</span>
                 </h1>
-                <p className="hero-subtitle funnel-sans">
+                <p className="hero-subtitle-printers funnel-sans">
                   Explore our wide range of desktops, laptops, gaming PCs, workstations, and custom-built computers from leading brands at competitive prices.
                 </p>
                 <div className="cta-group">
