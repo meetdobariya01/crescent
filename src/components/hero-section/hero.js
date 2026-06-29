@@ -1,6 +1,7 @@
 import React from "react";
 import { FaCheckCircle, FaArrowRight } from "react-icons/fa";
 import { motion } from "framer-motion";
+import { NavLink } from "react-router-dom";
 import "./hero.css";
 
 const services = [
@@ -14,7 +15,7 @@ const services = [
 const Hero = () => {
   return (
     <div>
-      <section className="hero-section">
+      <section className="hero-section-home">
         <div className="hero-overlay" />
 
         <div className="container h-100">
@@ -50,7 +51,7 @@ const Hero = () => {
                 className="hero-services"
               >
                 {services.map((item, index) => (
-                  <div className="service-item" key={index}>
+                  <div className="service-item-home" key={index}>
                     <FaCheckCircle />
                     <span>{item}</span>
                   </div>
@@ -58,14 +59,16 @@ const Hero = () => {
               </motion.div>
 
               {/* CTA */}
-              {/* <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="hero-btn"
-              >
-                Get Started Today
-                <FaArrowRight />
-              </motion.button> */}
+              <NavLink to="/contact" className="text-decoration-none">
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="hero-btn"
+                >
+                  Explore Solutions
+                  <FaArrowRight />
+                </motion.button>
+              </NavLink>
             </div>
           </div>
         </div>

@@ -1,11 +1,9 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { motion } from "framer-motion";
-import {
-FaInstagram, FaTwitter, FaLinkedin
-} from "react-icons/fa";
+import { FaInstagram, FaTwitter, FaLinkedin } from "react-icons/fa";
 import "./footer.css";
-import { Link } from "react-router-dom";
+import { Link, NavLink  } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -19,11 +17,13 @@ const Footer = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7 }}
             >
-              <img
-                src="./images/logo.png"
-                alt="Consulting Logo"
-                className="footer-logo"
-              />
+              <NavLink to="/">
+                <img
+                  src="./images/logo.png"
+                  alt="Consulting Logo"
+                  className="footer-logo"
+                />
+              </NavLink>
               <p className="footer-text funnel-sans mt-3">
                 We provide professional consulting services to help individuals
                 and businesses grow with clarity, confidence, and strategy.
@@ -40,10 +40,10 @@ const Footer = () => {
             >
               <h5 className="footer-title sf-pro-font">Services</h5>
               <ul className="footer-links funnel-sans">
-                <li>Business Consulting</li>
-                <li>Career Guidance</li>
-                <li>Mental Wellness</li>
-                <li>Strategy Planning</li>
+                <li>Apple Solutions</li>
+                <li>Enterprise IT</li>
+                <li>Convergence</li>
+                <li>Immersive Technology</li>
               </ul>
             </motion.div>
           </Col>
@@ -58,18 +58,21 @@ const Footer = () => {
               <h5 className="footer-title sf-pro-font">Company</h5>
               <ul className="footer-links funnel-sans">
                 <li>
-                  <Link className="text-light text-decoration-none" to="#">
+                  <Link
+                    className="text-light text-decoration-none"
+                    to="/aboutUs"
+                  >
                     About Us
                   </Link>
                 </li>
                 <li className="text-d">
-                  <Link to="#">Our Experts</Link>
-                </li>
-                <li className="text-d">
-                  <Link to="#">Privacy Policy</Link>
-                </li>
-                <li className="text-d">
                   <Link to="/contact">Contact Us</Link>
+                </li>
+                <li className="text-d">
+                  <Link to="/luxury-products">Brands</Link>
+                </li>
+                <li className="text-d">
+                  <Link to="/privacypolicy">Privacy Policy</Link>
                 </li>
               </ul>
             </motion.div>
@@ -82,7 +85,9 @@ const Footer = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.6 }}
             >
-              <h5 cl assName="footer-title sf-pro-font">Connect</h5>
+              <h5 cl assName="footer-title sf-pro-font">
+                Connect
+              </h5>
               <div className="text-d funnel-sans">
                 <a href="mailto:info@crescentworld.com">
                   info@crescentworld.com
@@ -131,7 +136,7 @@ const Footer = () => {
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.4 }}
         >
-          © {new Date().getFullYear()} Consulting Services. All Rights Reserved.
+          © {new Date().getFullYear()} Crescent World. All Rights Reserved.
         </motion.div>
       </Container>
     </footer>

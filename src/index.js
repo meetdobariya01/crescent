@@ -20,6 +20,16 @@ import Convergence from "./pages/convergence/convergence";
 import Immresive from "./pages/immresive/immresive";
 import AboutUs from "./pages/aboutus/aboutus";
 import Software from "./pages/software/software";
+import GCC from "./components/gcc/GCC";
+import OTSecurity from "./components/gcc/OTSecurity";
+import GCCLanding from "./pages/enterpriseit/enterpriceit";
+import TermsConditions from "./pages/privacy-policy/privacypolicy";
+import Computers from "./pages/computers/computers";
+import Printers from "./pages/printers/printers";
+import Video from "./pages/video-conf/video";
+import Storage from "./pages/storage/storage";
+import Servers from "./pages/servers/servers";
+// import OTSecurity from "../../../Users/hp/Downloads/OTSecurity";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -39,6 +49,15 @@ root.render(
       <Route path="/convergence" element={<Convergence />} />
       <Route path="/immresive" element={<Immresive />} />
       <Route path="/software" element={<Software />} />
+      <Route path="/privacypolicy" element={<TermsConditions />} />
+      <Route path="/enterpriseit" element={<GCCLanding />} />
+      <Route path="/GCC" element={<GCC />} />
+      <Route path="/OTSecurity" element={<OTSecurity />} />
+      <Route path="/computers" element={<Computers />} />
+      <Route path="/printers" element={<Printers />} />
+      <Route path="/videoandconferencing" element={<Video />} />
+      <Route path="/storage" element={<Storage />} />
+      <Route path="/servers" element={<Servers />} />
     </Routes>
   </Router>,
 );

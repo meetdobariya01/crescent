@@ -1,0 +1,49 @@
+
+.hero-section {
+  background: linear-gradient(
+    135deg,
+    #ffffff,
+    #f8fff8
+  );
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+}
+
+.text-success {
+  color: #0d6b46 !important;
+}
+
+.btn-success {
+  background: #0d6b46;
+  border-color: #0d6b46;
+}
+
+.btn-success:hover {
+  background: #095336;
+}
+
+.card {
+  border-radius: 18px;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.stat-card {
+  border-top: 4px solid #0d6b46;
+}
+
+.cta-section {
+  background: #f6fff8;
+}
+
+img {
+  object-fit: cover;
+}
+
+section {
+  overflow: hidden;
+}

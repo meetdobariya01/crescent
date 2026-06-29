@@ -12,7 +12,7 @@ const sections = [
   {
     title: "Enterprise IT",
     text: "Crescent World offers comprehensive enterprise IT solutions that modernize your digital infrastructure. We deliver high-performance servers, networking, storage and cloud platforms, along with cybersecurity and IT management tools. Our experts build scalable, future-ready systems (including virtualization and hyperconverged solutions) that grow with your business and ensure high availability. With an emphasis on innovation and robustness, our services transform data centers and networks for peak performance. Clients benefit from resilient, enterprise-grade architecture and seamless integration across all IT layers.",
-    img: "./images/enterprise-2.webp",
+    img: "./images/enterprise-it.jpg",
     bg: "dark",
   },
   {
@@ -57,7 +57,7 @@ const Solution = () => {
               {/* Image */}
               <div className="col-md-5 p-0">
                 <motion.img
-                  src={item.img}
+                  src={item.img} 
                   alt={item.title}
                   className="story-img"
                   initial={{ opacity: 0, scale: 0.9 }}
@@ -74,7 +74,7 @@ const Solution = () => {
                   // }`}
                   initial={{ opacity: 0, y: 40 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6 }}
+                  transition={{ duration: 0.6 }} 
                 >
                   <h3 className="sf-pro-font gradient-text ">{item.title}</h3>
                   <p className="funnel-sans text-format">{item.text}</p>

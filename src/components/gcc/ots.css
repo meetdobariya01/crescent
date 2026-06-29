@@ -1,0 +1,640 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
+
+.ot-page * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.ot-page {
+  /* font-family: "Inter", sans-serif; */
+  color: #1a1a2e;
+  line-height: 1.6;
+}
+
+/* ── HERO ── */
+.ot-hero {
+  position: relative;
+  min-height: 88vh;
+  display: flex;
+  align-items: center;
+  /* background: linear-gradient(135deg, #0d0d1a 0%, #1a0533 50%, #0d0d1a 100%); */
+  overflow: hidden;
+  padding: 80px 48px 80px;
+}
+.ot-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      ellipse 70% 60% at 80% 40%,
+      rgba(107, 47, 217, 0.25) 0%,
+      transparent 70%
+    ),
+    radial-gradient(
+      ellipse 40% 40% at 15% 70%,
+      rgba(240, 90, 40, 0.12) 0%,
+      transparent 60%
+    );
+  pointer-events: none;
+}
+/* Grid pattern overlay */
+.ot-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(107, 47, 217, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(107, 47, 217, 0.08) 1px, transparent 1px);
+  background-size: 48px 48px;
+  pointer-events: none;
+}
+.ot-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 680px;
+}
+.ot-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(107, 47, 217, 0.2);
+  border: 1px solid rgba(107, 47, 217, 0.4);
+  border-radius: 100px;
+  padding: 6px 16px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #b899ff;
+  margin-bottom: 28px;
+}
+.ot-eyebrow-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #f05a28;
+  animation: pulse 2s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.4);
+  }
+}
+.ot-hero h1 {
+  font-size: clamp(36px, 5vw, 64px);
+  font-weight: 900;
+  line-height: 1.08;
+  /* color: #fff; */
+  letter-spacing: -0.02em;
+  margin-bottom: 24px;
+}
+.ot-hero h1 span {
+  background: linear-gradient(
+    90deg,
+    rgba(43, 100, 206, 1) 0%,
+    rgba(220, 50, 215, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.ot-hero p {
+  font-size: 18px;
+  /* color: rgba(255, 255, 255, 0.72); */
+  max-width: 540px;
+  margin-bottom: 40px;
+  line-height: 1.7;
+}
+.ot-hero-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.btn-primary {
+  background: #6b2fd9;
+  color: #fff;
+  border: none;
+  padding: 14px 32px;
+  border-radius: 100px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition:
+    background 0.2s,
+    transform 0.15s;
+  text-decoration: none;
+}
+.btn-primary:hover {
+  background: #5520b8;
+  transform: translateY(-1px);
+}
+.btn-outline {
+  background: transparent;
+  color: #000;
+  border: 1.5px solid rgba(0, 0, 0, 0.3);
+  padding: 14px 32px;
+  border-radius: 100px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    border-color 0.2s,
+    transform 0.15s;
+  text-decoration: none;
+}
+.btn-outline:hover {
+  border-color: #000;
+  transform: translateY(-1px);
+}
+
+/* Floating stats panel */
+.ot-hero-stats {
+  position: absolute;
+  right: 80px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.stat-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(107, 47, 217, 0.3);
+  border-radius: 16px;
+  padding: 20px 28px;
+  text-align: center;
+  backdrop-filter: blur(12px);
+  min-width: 160px;
+}
+.stat-card .stat-num {
+  font-size: 36px;
+  font-weight: 900;
+  /* color: #fff; */
+  line-height: 1;
+}
+.stat-card .stat-num span {
+  /* color: #f05a28; */
+}
+.stat-card .stat-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  /* color: rgba(255, 255, 255, 0.5); */
+  margin-top: 4px;
+}
+
+/* ── THREAT TICKER ── */
+.ot-ticker {
+  background: #0d0d1a;
+  border-top: 1px solid rgba(107, 47, 217, 0.2);
+  border-bottom: 1px solid rgba(107, 47, 217, 0.2);
+  padding: 14px 0;
+  overflow: hidden;
+}
+.ticker-track {
+  display: flex;
+  gap: 48px;
+  white-space: nowrap;
+  animation: ticker 22s linear infinite;
+  width: max-content;
+}
+@keyframes ticker {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+.ticker-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.55);
+}
+.ticker-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #f05a28;
+  flex-shrink: 0;
+}
+
+/* ── WHAT IS OT ── */
+.ot-what {
+  padding: 100px 48px;
+  background: #fff;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.ot-section-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #6b2fd9;
+  margin-bottom: 16px;
+}
+.ot-what h2 {
+  font-size: clamp(28px, 3.5vw, 44px);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin-bottom: 20px;
+}
+.ot-what p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.75;
+  margin-bottom: 16px;
+}
+.ot-what-visual {
+  background: linear-gradient(135deg, #f7f5ff 0%, #ede8fc 100%);
+  border-radius: 24px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.ot-layer {
+  background: #fff;
+  border-radius: 12px;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  box-shadow: 0 2px 12px rgba(107, 47, 217, 0.08);
+  border-left: 4px solid;
+}
+.ot-layer.it {
+  border-color: #6b2fd9;
+}
+.ot-layer.ot {
+  border-color: #f05a28;
+}
+.ot-layer.physical {
+  border-color: #22c55e;
+}
+.ot-layer-icon {
+  font-size: 24px;
+}
+.ot-layer-text {
+  font-size: 14px;
+}
+.ot-layer-text strong {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+.ot-layer-text span {
+  color: #888;
+  font-size: 12px;
+}
+.ot-layer-badge {
+  margin-left: auto;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 4px 10px;
+  border-radius: 100px;
+}
+.it .ot-layer-badge {
+  background: #ede8fc;
+  color: #6b2fd9;
+}
+.ot .ot-layer-badge {
+  background: #fef0e8;
+  color: #f05a28;
+}
+.physical .ot-layer-badge {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+/* ── THREAT LANDSCAPE ── */
+.ot-threats {
+  background: #f7f5ff;
+  padding: 100px 48px;
+}
+.ot-threats-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.ot-section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.ot-section-header h2 {
+  font-size: clamp(28px, 3.5vw, 44px);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+}
+.ot-section-header p {
+  font-size: 17px;
+  color: #666;
+  max-width: 560px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+.threats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.threat-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 32px;
+  border: 1px solid rgba(107, 47, 217, 0.1);
+  transition:
+    box-shadow 0.2s,
+    transform 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+.threat-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #6b2fd9, #f05a28);
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.threat-card:hover {
+  box-shadow: 0 12px 40px rgba(107, 47, 217, 0.12);
+  transform: translateY(-3px);
+}
+.threat-card:hover::before {
+  opacity: 1;
+}
+.threat-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  background: #f7f5ff;
+}
+.threat-card h3 {
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.threat-card p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.65;
+}
+
+/* ── SERVICES ── */
+.ot-services {
+  background: #0d0d1a;
+  padding: 100px 48px;
+}
+.ot-services-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.ot-services .ot-section-label {
+  color: #9b6dff;
+}
+.ot-services .ot-section-header h2 {
+  color: #fff;
+}
+.ot-services .ot-section-header p {
+  color: rgba(255, 255, 255, 0.55);
+}
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-top: 60px;
+}
+.service-item {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(107, 47, 217, 0.2);
+  border-radius: 20px;
+  padding: 36px;
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  transition:
+    background 0.2s,
+    border-color 0.2s;
+}
+.service-item:hover {
+  background: rgba(107, 47, 217, 0.1);
+  border-color: rgba(107, 47, 217, 0.4);
+}
+.service-num {
+  font-size: 11px;
+  font-weight: 800;
+  color: #f05a28;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding-top: 4px;
+  flex-shrink: 0;
+}
+.service-body h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 10px;
+}
+.service-body p {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 1.65;
+}
+
+/* ── WHY CRESCENT ── */
+.ot-why {
+  padding: 100px 48px;
+  background: #fff;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  margin-top: 60px;
+}
+.why-card {
+  text-align: center;
+  padding: 32px 20px;
+  border-radius: 16px;
+  border: 1px solid #f0eeff;
+  transition: box-shadow 0.2s;
+}
+.why-card:hover {
+  box-shadow: 0 8px 32px rgba(107, 47, 217, 0.1);
+}
+.why-card .why-icon {
+  font-size: 32px;
+  margin-bottom: 16px;
+  display: block;
+}
+.why-card h3 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.why-card p {
+  font-size: 13px;
+  color: #777;
+  line-height: 1.6;
+}
+
+/* ── INDUSTRIES ── */
+.ot-industries {
+  background: #f7f5ff;
+  padding: 80px 48px;
+}
+.industries-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.industries-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 48px;
+}
+.industry-pill {
+  background: #fff;
+  border: 1px solid rgba(107, 47, 217, 0.2);
+  border-radius: 100px;
+  padding: 10px 24px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1a1a2e;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition:
+    background 0.15s,
+    border-color 0.15s,
+    color 0.15s;
+  cursor: default;
+}
+.industry-pill:hover {
+  background: #6b2fd9;
+  border-color: #6b2fd9;
+  color: #fff;
+}
+
+/* ── CTA ── */
+.ot-cta {
+  /* background: linear-gradient(135deg, #6b2fd9 0%, #4a1d96 100%); */
+  padding: 100px 48px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.ot-cta::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at 30% 50%,
+    rgba(240, 90, 40, 0.2) 0%,
+    transparent 60%
+  );
+  pointer-events: none;
+}
+.ot-cta h2 {
+  font-size: clamp(28px, 4vw, 52px);
+  font-weight: 900;
+  /* color: #fff; */
+  letter-spacing: -0.02em;
+  max-width: 700px;
+  margin: 0 auto 20px;
+  position: relative;
+}
+.ot-cta p {
+  font-size: 17px;
+  /* color: rgba(255, 255, 255, 0.7); */
+  margin-bottom: 40px;
+  position: relative;
+}
+.ot-cta .btn-white {
+  background: #fff;
+  color: #6b2fd9;
+  border: none;
+  padding: 16px 40px;
+  border-radius: 100px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    transform 0.15s,
+    box-shadow 0.15s;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+}
+.ot-cta .btn-white:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 900px) {
+  .ot-hero {
+    padding: 80px 24px;
+  }
+  .ot-hero-stats {
+    display: none;
+  }
+  .ot-what {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 64px 24px;
+  }
+  .threats-grid {
+    grid-template-columns: 1fr;
+  }
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+  .why-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .ot-threats,
+  .ot-services,
+  .ot-industries,
+  .ot-cta {
+    padding: 64px 24px;
+  }
+  .ot-why {
+    padding: 64px 24px;
+  }
+}

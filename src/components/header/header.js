@@ -35,30 +35,90 @@ const Header = () => {
 
         {/* Nav Items */}
         <div className="collapse navbar-collapse" id="premiumNav">
-          <ul className="navbar-nav mx-auto premium-nav">
+          <ul className="navbar-nav mx-auto premium-nav funnel-sans">
             {[
               { name: "About Us", path: "/aboutUs" },
               { name: "Apple", path: "/apple-solution" },
+              {
+                name: "Enterprise IT",
+                path: "#",
+                dropdown: [
+                  {
+                    name: "GCC",
+                    path: "/GCC",
+                  },
+                  {
+                    name: "OTSecurity",
+                    path: "/OTSecurity",
+                  },
+                  {
+                    name: "Computers",
+                    path: "/computers",
+                  },
+
+                  {
+                    name: "Printers & Supplies",
+                    path: "/printers",
+                  },
+                  {
+                    name: "Video Conferencing",
+                    path: "/videoandconferencing",
+                  },
+                  {
+                    name: "Storage & Hard Drives",
+                    path: "/storage",
+                  },
+                  {
+                    name: "Servers & Server Management",
+                    path: "/servers",
+                  },
+                ],
+              },
               { name: "Convergence", path: "/convergence" },
-              { name: "Immersive Tech", path: "/immresive" }, 
-              { name: "Brands", path: "/luxury-products" },
+              { name: "Immersive Tech", path: "/immresive" },
+              { name: "Partners", path: "/luxury-products" },
               { name: "SaaS", path: "/software" },
               { name: "Contact Us", path: "/contact" },
             ].map((item, i) => (
               <motion.li
                 key={i}
-                className="nav-item"
+                className={`nav-item ${item.dropdown ? "dropdown" : ""}`}
                 whileHover={{ y: -3 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
                 <NavLink
                   to={item.path}
-                  className={({ isActive }) =>
-                    isActive ? "nav-link active" : "nav-link"
-                  }
+                  className={({ isActive }) => {
+                    const isEnterpriseActive =
+                      item.name === "Enterprise IT" &&
+                      window.location.pathname.startsWith("/enterpriseit");
+
+                    return isActive || isEnterpriseActive
+                      ? "nav-link active"
+                      : "nav-link";
+                  }}
                 >
                   {item.name}
                 </NavLink>
+
+                {item.dropdown && (
+                  <ul className="dropdown-menu custom-dropdown">
+                    {item.dropdown.map((subItem, idx) => (
+                      <li key={idx}>
+                        <NavLink
+                          to={subItem.path}
+                          className={({ isActive }) =>
+                            isActive
+                              ? "dropdown-item active-dropdown"
+                              : "dropdown-item"
+                          }
+                        >
+                          {subItem.name}
+                        </NavLink>
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </motion.li>
             ))}
           </ul>

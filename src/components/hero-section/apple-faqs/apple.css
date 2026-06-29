@@ -1,0 +1,59 @@
+.faq-section {
+  background: #f8f9fb;
+}
+
+.image-wrapper {
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.main-image {
+  width: 100%;
+  transition: all 0.5s ease;
+  border-radius: 20px;
+}
+
+/* Card */
+.faq-card-apple {
+  cursor: pointer;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  padding: 10px;
+}
+
+.faq-card-apple:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.faq-card-apple.active {
+  border-left: 4px solid #ff3b30;
+  background: #fff;
+}
+
+/* Arrow */
+.arrow {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ff3b30;
+}
+
+/* Content Animation */
+.faq-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.faq-content.show {
+  max-height: 200px;
+  margin-top: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .main-image {
+    margin-bottom: 20px;
+  }
+}

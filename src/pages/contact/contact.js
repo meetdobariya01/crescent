@@ -193,7 +193,7 @@ const Contact = () => {
                     )}
 
                     {title === "Contact" && (
-                      <a href="tel:+7359044944">7359044944</a>
+                      <a href="tel:+919824018555">+91  98240 18555</a>
                     )}
 
                     {title === "Location" && (

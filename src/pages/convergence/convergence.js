@@ -1,4 +1,4 @@
-import React, { useState, useEffect  } from "react";
+import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { Container, Row, Col } from "react-bootstrap";
 import { motion } from "framer-motion";
@@ -59,7 +59,7 @@ const principles = [
   {
     title: "Public Addressing System Products",
     word: "Clear communication, when it matters most.",
-    desc: "Public addressing systems enable effective communication across large spaces. Whether for announcements, emergency alerts, or background audio, our PA solutions deliver clarity, coverage, and reliability—indoors and outdoors.",
+    desc: "Public addressing systems enable effective communication across large spaces. Whether for announcements, emergency alerts, or background audio, our PA solutions deliver clarity, coverage, and reliability-indoors and outdoors.",
     icon: <BsBoundingBox />,
   },
 ];

@@ -6,6 +6,7 @@ import "./applesolution.css";
 import { Button } from "react-bootstrap";
 import Header from "../../components/header/header";
 import Footer from "../../components/footer/footer";
+import Apple from "../../components/hero-section/apple-faqs/apple";
 
 const features = [
   {
@@ -19,7 +20,7 @@ const features = [
   {
     title: "iPad",
     word: "Incredibly capable. Remarkably versatile",
-    text: "iPad offers a unique balance of simplicity and capability. It’s powerful enough to replace traditional computers, yet intuitive enough to feel natural from the first touch. With support for Apple Pencil and keyboard accessories, iPad becomes a canvas for creativity, a tool for productivity, and a platform for learning. Crescent World delivers iPad solutions that fit effortlessly into classrooms, businesses, healthcare, and creative spaces—designed around how people actually work.",
+    text: "iPad offers a unique balance of simplicity and capability. It’s powerful enough to replace traditional computers, yet intuitive enough to feel natural from the first touch. With support for Apple Pencil and keyboard accessories, iPad becomes a canvas for creativity, a tool for productivity, and a platform for learning. Crescent World delivers iPad solutions that fit effortlessly into classrooms, businesses, healthcare, and creative spaces-designed around how people actually work.",
     img: "./images/products/ipad.jpeg",
     // bg: "bg-soft-brown",
     reverse: true,
@@ -68,7 +69,7 @@ const features = [
     title: "Accessories",
     word: "Thoughtfully designed. Perfectly matched.",
     text: "Apple accessories are created with the same attention to detail as the devices themselves. From keyboards and trackpads to Apple Pencil, cases, cables, and adapters, each accessory enhances how you work and interact with your devices. Crescent World helps you select the right accessories to ensure your Apple ecosystem feels complete, balanced, and perfectly matched to your needs.",
-    img: "/images/products/accessories.jpeg",
+    img: "/images/products/accessories.jpeg", 
     // bg: "bg-dark-brown",
     reverse: true,
   },
@@ -188,7 +189,7 @@ const Applesolution = () => {
           className="whywork-subtitle funnel-sans"
         >
           We believe great technology should feel invisible. Every Apple
-          solution we deliver is guided by simplicity, precision, and care—so
+          solution we deliver is guided by simplicity, precision, and care-so
           you can focus on what matters most.
         </motion.p>
       </div>
