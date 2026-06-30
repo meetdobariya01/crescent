@@ -26,7 +26,7 @@ const Hero = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                className="hero-subtitle "
+                className="hero-section-subtitle"
               >
                 WELCOME TO CRESCENT WORLD
               </motion.p>
