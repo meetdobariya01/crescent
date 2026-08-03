@@ -1,0 +1,144 @@
+.admin-contacts-page {
+  min-height: 100vh;
+  background: #f8f9fa;
+}
+
+/* Stats Cards */
+.stats-card {
+  border: none;
+  border-radius: 12px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: default;
+}
+
+.stats-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.stats-card.total {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.stats-card.pending {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: white;
+}
+
+.stats-card.read {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  color: white;
+}
+
+.stats-card.replied {
+  background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+  color: white;
+}
+
+.stats-card .stats-icon {
+  font-size: 2rem;
+  opacity: 0.6;
+}
+
+.stats-card h6 {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.stats-card h2 {
+  color: white;
+  font-weight: 700;
+}
+
+/* Table styling */
+.table th {
+  font-weight: 600;
+  color: #495057;
+  border-bottom: 2px solid #dee2e6;
+}
+
+.table td {
+  vertical-align: middle;
+}
+
+.table-hover tbody tr:hover {
+  background-color: rgba(102, 126, 234, 0.05);
+}
+
+.table-warning {
+  background-color: rgba(255, 193, 7, 0.1) !important;
+}
+
+/* Badge styling */
+.badge {
+  font-weight: 500;
+  font-size: 0.8rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Animation */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spin {
+  animation: spin 1s linear infinite;
+}
+
+/* Modal styling */
+.modal-header.bg-dark {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+}
+
+.modal-header .btn-close {
+  filter: brightness(0) invert(1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .admin-contacts-page .d-flex {
+    flex-direction: column;
+    align-items: stretch !important;
+  }
+  
+  .admin-contacts-page .d-flex .gap-2 {
+    margin-top: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .admin-contacts-page .d-flex .gap-2 .btn {
+    flex: 1;
+    min-width: 100px;
+  }
+  
+  .table-responsive {
+    font-size: 0.9rem;
+  }
+  
+  .stats-card h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Loading shimmer effect */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.shimmer {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
