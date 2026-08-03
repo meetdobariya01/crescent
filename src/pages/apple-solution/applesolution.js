@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import "./applesolution.css";
 import { Button } from "react-bootstrap";
 import Header from "../../components/header/header";
@@ -16,6 +16,7 @@ const features = [
     img: "./images/products/mac.jpeg",
     // bg: "bg-light-cream",
     reverse: false,
+    link: "https://store.crescentworld.com/",
   },
   {
     title: "iPad",
@@ -24,6 +25,7 @@ const features = [
     img: "./images/products/ipad.jpeg",
     // bg: "bg-soft-brown",
     reverse: true,
+    link: "https://store.crescentworld.com/",
   },
   {
     title: "iPhone",
@@ -32,6 +34,7 @@ const features = [
     img: "/images/products/iphone.jpeg",
     // bg: "bg-light-cream",
     reverse: false,
+    link: "https://store.crescentworld.com/",
   },
   {
     title: "Apple Watch",
@@ -40,6 +43,7 @@ const features = [
     img: "/images/products/watch.png",
     // bg: "bg-dark-brown",
     reverse: true,
+    link: "https://store.crescentworld.com/",
   },
   {
     title: "Apple Vision Pro",
@@ -48,6 +52,7 @@ const features = [
     img: "/images/products/vision.jpeg",
     // bg: "bg-dark-brown",
     reverse: false,
+    link: "https://store.crescentworld.com/",
   },
   {
     title: "AirPods",
@@ -56,6 +61,7 @@ const features = [
     img: "/images/products/airpodes.jpeg",
     // bg: "bg-dark-brown",
     reverse: true,
+    link: "https://store.crescentworld.com/",
   },
   {
     title: "TV & Home",
@@ -64,14 +70,16 @@ const features = [
     img: "/images/products/tv.jpeg",
     // bg: "bg-dark-brown",
     reverse: false,
+    link: "https://store.crescentworld.com/",
   },
   {
     title: "Accessories",
     word: "Thoughtfully designed. Perfectly matched.",
     text: "Apple accessories are created with the same attention to detail as the devices themselves. From keyboards and trackpads to Apple Pencil, cases, cables, and adapters, each accessory enhances how you work and interact with your devices. Crescent World helps you select the right accessories to ensure your Apple ecosystem feels complete, balanced, and perfectly matched to your needs.",
-    img: "/images/products/accessories.jpeg", 
+    img: "/images/products/accessories.jpeg",
     // bg: "bg-dark-brown",
     reverse: true,
+    link: "https://store.crescentworld.com/",
   },
 ];
 
@@ -82,6 +90,7 @@ const cardVariant = {
 
 const Applesolution = () => {
   const { pathname } = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     window.scrollTo({
@@ -162,9 +171,15 @@ const Applesolution = () => {
                   <h3 className="sf-pro-font">{item.title}</h3>
                   <h4 className="gradient-text">{item.word}</h4>
                   <p className="text-format">{item.text}</p>
-                  <button type="button" class="btn btn-outline-dark mt-3">
+                  <button
+                    type="button"
+                    className="btn btn-outline-dark mt-3"
+                    onClick={() =>
+                      window.open(item.link, "_blank", "noopener,noreferrer")
+                    }
+                  >
                     Buy Now
-                  </button>
+                  </button> 
                 </motion.div>
               </div>
             </motion.div>

@@ -118,7 +118,7 @@ const Contact = () => {
 
                       <div className="d-flex gap-3">
                         <Button variant="dark" className="px-4">
-                          Send Email
+                          Submit
                         </Button>
 
                         <Button

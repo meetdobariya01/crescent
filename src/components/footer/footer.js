@@ -3,7 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import { motion } from "framer-motion";
 import { FaInstagram, FaTwitter, FaLinkedin } from "react-icons/fa";
 import "./footer.css";
-import { Link, NavLink  } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -40,10 +40,23 @@ const Footer = () => {
             >
               <h5 className="footer-title sf-pro-font">Services</h5>
               <ul className="footer-links funnel-sans">
-                <li>Apple Solutions</li>
-                <li>Enterprise IT</li>
-                <li>Convergence</li>
-                <li>Immersive Technology</li>
+                <li className="text-d">
+                  <Link to="/immresive">Immersive Technology</Link>
+                </li>
+                <li>
+                  <Link
+                    className="text-light text-decoration-none"
+                    to="/apple-solution"
+                  >
+                    Apple Solutions
+                  </Link>
+                </li>
+                <li className="text-d">
+                  <Link to="/convergence">Convergence</Link>
+                </li>
+                <li className="text-d">
+                  <Link to="/software">SaaS</Link>
+                </li>
               </ul>
             </motion.div>
           </Col>
@@ -69,7 +82,7 @@ const Footer = () => {
                   <Link to="/contact">Contact Us</Link>
                 </li>
                 <li className="text-d">
-                  <Link to="/luxury-products">Brands</Link>
+                  <Link to="/luxury-products">Partners</Link>
                 </li>
                 <li className="text-d">
                   <Link to="/privacypolicy">Privacy Policy</Link>

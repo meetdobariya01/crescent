@@ -110,7 +110,7 @@ const Convergence = () => {
             {services.map((item, index) => (
               <Col lg={4} md={6} key={index}>
                 <motion.div
-                  className={`service-card ${active === index ? "active" : ""}`}
+                  className={`service-card-convergence ${active === index ? "active" : ""}`}
                   whileHover={{ y: -8 }}
                   transition={{ duration: 0.3 }}
                   onMouseEnter={() => setActive(index)}

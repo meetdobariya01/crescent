@@ -498,7 +498,7 @@ const Servers = () => {
       <div className="glow-spot glow-spot-4"></div>
 
       {/* Hero Section */}
-      <section className="hero-section" id="hero">
+      <section className="hero-section mt-5" id="hero">
         <Container>
           <Row className="align-items-center">
             <Col lg={6} className="text-start">

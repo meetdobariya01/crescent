@@ -70,7 +70,7 @@ const Aboutus = () => {
         variants={fadeUp}
       >
         <Container>
-          <Row className="align-items-center gy-4">
+          <Row className="align-items-center gy-4 mt-5">
             <Col lg={6}>
               <h1 className="hero-title sf-pro-font">
                 Our Journey - From Legacy to Innovation

@@ -1,166 +1,241 @@
-import { motion } from "framer-motion";
-import { FaInstagram, FaTwitter, FaLinkedin } from "react-icons/fa";
+import React, { useState, useEffect } from "react";
+import { Navbar, Nav, Container, Collapse } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
+import { motion, AnimatePresence } from "framer-motion";
+import {
+  FaInstagram,
+  FaTwitter,
+  FaLinkedin,
+  FaChevronDown,
+  FaChevronUp,
+} from "react-icons/fa";
+
 import "./header.css";
 
-const Header = () => {
+const navItems = [
+  {
+    name: "About Us",
+    path: "/aboutUs",
+  },
+  {
+    name: "Apple",
+    path: "/apple-solution",
+  },
+  {
+    name: "Enterprise IT",
+    dropdown: [
+      { name: "GCC", path: "/GCC" },
+      { name: "OT Security", path: "/OTSecurity" },
+      { name: "Computers", path: "/computers" },
+      { name: "Data Center", path: "/datacenter" },
+      { name: "Printers", path: "/printers" },
+      {
+        name: "Video Conferencing",
+        path: "/videoandconferencing",
+      },
+      {
+        name: "Storage",
+        path: "/storage",
+      },
+      {
+        name: "Servers",
+        path: "/servers",
+      },
+    ],
+  },
+  {
+    name: "Digital Solution",
+    dropdown: [
+      { name: "Convergence", path: "/convergence" },
+      { name: "Immersive Tech", path: "/immresive" },
+      { name: "Partners", path: "/luxury-products" },
+      { name: "Saas", path: "/software" },
+    ],
+  },
+  {
+    name: "Contact Us",
+    path: "/contact",
+  },
+];
+
+export default function Header() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const [activeDropdown, setActiveDropdown] = useState(null);
+
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 40);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <motion.nav
-      initial={{ y: -80, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.8, ease: "easeOut" }}
-      className="navbar navbar-expand-lg premium-navbar fixed-top"
+    <motion.div
+      initial={{
+        y: -80,
+        opacity: 0,
+      }}
+      animate={{
+        y: 0,
+        opacity: 1,
+      }}
+      transition={{
+        duration: 0.8,
+      }}
     >
-      <div className="container-fluid nav-wrapper">
-        {/* Logo */}
-        <a className="navbar-brand premium-logo" href="/">
-          <img
-            src="./images/logo.png"
-            alt="Crescent Logo"
-            className="logo-img"
-          />
-        </a>
+      <Navbar
+        expand="lg"
+        fixed="top"
+        expanded={menuOpen}
+        className={`premium-navbar ${scrolled ? "navbar-scroll" : ""}`}
+      >
+        <Container fluid>
+          <Navbar.Brand as={NavLink} to="/">
+            <img src="./images/logo.png" className="logo-img" alt="Logo" />
+          </Navbar.Brand>
 
-        {/* Mobile Toggle */}
-        <button
-          className="navbar-toggler premium-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#premiumNav"
-        >
-          <span />
-          <span />
-          <span />
-        </button>
+          <button
+            className={`premium-toggler ${menuOpen ? "open" : ""}`}
+            onClick={() => setMenuOpen(!menuOpen)}
+          >
+            <span />
+            <span />
+            <span />
+          </button>
 
-        {/* Nav Items */}
-        <div className="collapse navbar-collapse" id="premiumNav">
-          <ul className="navbar-nav mx-auto premium-nav funnel-sans">
-            {[
-              { name: "About Us", path: "/aboutUs" },
-              { name: "Apple", path: "/apple-solution" },
-              {
-                name: "Enterprise IT",
-                path: "#",
-                dropdown: [
-                  {
-                    name: "GCC",
-                    path: "/GCC",
-                  },
-                  {
-                    name: "OTSecurity",
-                    path: "/OTSecurity",
-                  },
-                  {
-                    name: "Computers",
-                    path: "/computers",
-                  },
-                   {
-                    name: "Data Center",
-                    path: "/datacenter",
-                  },
-
-                  {
-                    name: "Printers & Supplies",
-                    path: "/printers",
-                  },
-                  {
-                    name: "Video Conferencing",
-                    path: "/videoandconferencing",
-                  },
-                  {
-                    name: "Storage & Hard Drives",
-                    path: "/storage",
-                  },
-                  {
-                    name: "Servers & Server Management",
-                    path: "/servers",
-                  },
-                 
-                ],
-              },
-              { name: "Convergence", path: "/convergence" },
-              { name: "Immersive Tech", path: "/immresive" },
-              { name: "Partners", path: "/luxury-products" },
-              { name: "SaaS", path: "/software" },
-              { name: "Contact Us", path: "/contact" },
-            ].map((item, i) => (
-              <motion.li
-                key={i}
-                className={`nav-item ${item.dropdown ? "dropdown" : ""}`}
-                whileHover={{ y: -3 }}
-                transition={{ type: "spring", stiffness: 300 }}
-              >
-                <NavLink
-                  to={item.path}
-                  className={({ isActive }) => {
-                    const isEnterpriseActive =
-                      item.name === "Enterprise IT" &&
-                      window.location.pathname.startsWith("/enterpriseit");
-
-                    return isActive || isEnterpriseActive
-                      ? "nav-link active"
-                      : "nav-link";
+          <Navbar.Collapse>
+            <Nav className="mx-auto premium-nav">
+              {navItems.map((item, index) => (
+                <motion.div
+                  key={index}
+                  initial={{
+                    opacity: 0,
+                    y: -20,
+                  }}
+                  animate={{
+                    opacity: 1,
+                    y: 0,
+                  }}
+                  transition={{
+                    delay: index * 0.08,
                   }}
                 >
-                  {item.name}
-                </NavLink>
+                  {!item.dropdown ? (
+                    <NavLink
+                      className="nav-link"
+                      to={item.path}
+                      onClick={() => setMenuOpen(false)}
+                    >
+                      {item.name}
+                    </NavLink>
+                  ) : (
+                    <div
+                      className="premium-dropdown"
+                      onMouseEnter={() => setActiveDropdown(index)}
+                      onMouseLeave={() => setActiveDropdown(null)}
+                    >
+                      <button
+                        className="dropdown-btn"
+                        onClick={() =>
+                          setActiveDropdown(
+                            activeDropdown === index ? null : index,
+                          )
+                        }
+                      >
+                        {item.name}
 
-                {item.dropdown && (
-                  <ul className="dropdown-menu custom-dropdown">
-                    {item.dropdown.map((subItem, idx) => (
-                      <li key={idx}>
-                        <NavLink
-                          to={subItem.path}
-                          className={({ isActive }) =>
-                            isActive
-                              ? "dropdown-item active-dropdown"
-                              : "dropdown-item"
-                          }
-                        >
-                          {subItem.name}
-                        </NavLink>
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </motion.li>
-            ))}
-          </ul>
+                        {activeDropdown === index ? (
+                          <FaChevronUp />
+                        ) : (
+                          <FaChevronDown />
+                        )}
+                      </button>
 
-          {/* Social Icons */}
-          <div className="premium-social d-flex">
-            <motion.a
-              whileHover={{ scale: 1.2 }}
-              href="https://www.instagram.com/crescent_world/?hl=en"
-              target="_blank"
-              rel="noopener noreferrer"
+                      <AnimatePresence>
+                        {activeDropdown === index && (
+                          <motion.div
+                            initial={{ opacity: 0, y: 15 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, y: 15 }}
+                            transition={{ duration: 0.25 }}
+                            className="dropdown-menu-custom"
+                          >
+                            {item.dropdown.map((sub, i) => (
+                              <NavLink
+                                key={i}
+                                className="dropdown-link"
+                                to={sub.path}
+                                onClick={() => {
+                                  setMenuOpen(false);
+                                  setActiveDropdown(null);
+                                }}
+                              >
+                                {sub.name}
+                              </NavLink>
+                            ))}
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </div>
+                  )}
+                </motion.div>
+              ))}
+            </Nav>
+
+            <motion.div
+              className="social-icons-header"
+              initial={{
+                opacity: 0,
+              }}
+              animate={{
+                opacity: 1,
+              }}
             >
-              <FaInstagram />
-            </motion.a>
+              <motion.a
+                whileHover={{
+                  scale: 1.2,
+                  rotate: 10,
+                }}
+                href="https://www.instagram.com/crescent_world/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FaInstagram />
+              </motion.a>
 
-            <motion.a
-              whileHover={{ scale: 1.2 }}
-              href="https://x.com/Crescent_Mac"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaTwitter />
-            </motion.a>
+              <motion.a
+                whileHover={{
+                  scale: 1.2,
+                  rotate: 10,
+                }}
+                href="https://x.com/Crescent_Mac"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FaTwitter />
+              </motion.a>
 
-            <motion.a
-              whileHover={{ scale: 1.2 }}
-              href="https://www.linkedin.com/company/crescent-electronics-pvt.-ltd./?originalSubdomain=in"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaLinkedin />
-            </motion.a>
-          </div>
-        </div>
-      </div>
-    </motion.nav>
+              <motion.a
+                whileHover={{
+                  scale: 1.2,
+                  rotate: 10,
+                }}
+                href="https://www.linkedin.com/company/crescent-electronics-pvt.-ltd./"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FaLinkedin />
+              </motion.a>
+            </motion.div>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
+    </motion.div>
   );
-};
-
-export default Header;
+}

@@ -3,7 +3,7 @@
   background: #fafafa;
 }
 
-.service-card {
+.service-card-convergence {
   background: #ffffff;
   border-radius: 20px;
   padding: 35px;
@@ -13,7 +13,7 @@
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
 }
 
-.service-card .icon-box {
+.service-card-convergence .icon-box {
   width: 48px;
   height: 48px;
   border-radius: 50%;
@@ -27,13 +27,13 @@
   transition: all 0.3s ease;
 }
 
-.service-card h4 {
+.service-card-convergence h4 {
   font-weight: 600;
   margin-bottom: 12px;
   color: #111;
 }
 
-.service-card p {
+.service-card-convergence p {
   color: #666;
   font-size: 15px;
   line-height: 1.6;
@@ -50,22 +50,22 @@
 }
 
 /* ACTIVE / HOVER STATE */
-.service-card.active,
-.service-card:hover {
+.service-card-convergence.active,
+.service-card-convergence:hover {
   background: linear-gradient(90deg, #5f2cff, #a855f7);
 }
 
-.service-card.active h4,
-.service-card.active p,
-.service-card.active .read-more,
-.service-card:hover h4,
-.service-card:hover p,
-.service-card:hover .read-more {
+.service-card-convergence.active h4,
+.service-card-convergence.active p,
+.service-card-convergence.active .read-more,
+.service-card-convergence:hover h4,
+.service-card-convergence:hover p,
+.service-card-convergence:hover .read-more {
   color: #ffffff;
 }
 
-.service-card.active .icon-box,
-.service-card:hover .icon-box {
+.service-card-convergence.active .icon-box,
+.service-card-convergence:hover .icon-box {
   background: rgba(255, 255, 255, 0.15);
   color: #ffffff;
 }

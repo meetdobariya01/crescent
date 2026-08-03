@@ -41,12 +41,12 @@ const Contact = () => {
       >
         {/* Header */}
         <motion.section
-          className="contact-header text-center"
+          className="contact-header text-center "
           initial={{ y: -40, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.7 }}
         >
-          <h1>Contact Us</h1>
+          <h1 className="mt-5">Contact Us</h1>
           {/* <p>Contact Us</p> */}
         </motion.section>
 
@@ -77,7 +77,7 @@ const Contact = () => {
                   transition={{ delay: 0.3 }}
                   className="sf-pro-font"
                 >
-                  Let’s Build Success — <br />
+                  Let’s Build Success - <br />
                   <span>Together.</span>
                 </motion.h2>
 

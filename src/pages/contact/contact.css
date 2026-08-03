@@ -2,6 +2,7 @@
   background: #352d7d;
   color: #fff;
   padding: 70px 20px;
+  border-radius: 0 0 18px 18px;
   animation: headerDrop 0.8s ease forwards;
 }
 
