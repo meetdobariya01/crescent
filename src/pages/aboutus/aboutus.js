@@ -202,8 +202,8 @@ const Aboutus = () => {
                 whileHover={{ scale: 1.03 }}
               >
                 <h2 className="vm-title">Our Vision</h2>
-                <p className="vm-text funnel-sans">
-                  To be a catalyst of transformation — building world-class
+                <p className="vm-text vm-list funnel-sans">
+                  To be a catalyst of transformation - building world-class
                   solutions that empower industries, enrich communities, and
                   inspire the future.
                 </p>
@@ -539,7 +539,7 @@ const Aboutus = () => {
               ].map((service, i) => (
                 <Col md={6} lg={6} key={i}>
                   <motion.div variants={fadeUp}>
-                    <Card className="service-card h-100">
+                    <Card className="service-card-about h-100">
                       <Card.Body>
                         <h5 className="sf-pro-font">{service.title}</h5>
                         <p className="funnel-sans">{service.desc}</p>
@@ -562,7 +562,7 @@ const Aboutus = () => {
             viewport={{ once: true }}
             variants={{ visible: { transition: { staggerChildren: 0.2 } } }}
           >
-            <motion.h2 className="section-title text-center" variants={fadeUp}>
+            <motion.h2 className="section-title text-center text-white" variants={fadeUp}>
               Why We Exist
             </motion.h2>
 

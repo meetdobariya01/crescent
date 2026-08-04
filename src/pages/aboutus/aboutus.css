@@ -149,7 +149,7 @@
   padding: 80px 0;
 }
 
-.service-card {
+.service-card-about {
   border: none;
   border-radius: 20px;
   padding: 30px;
@@ -157,7 +157,7 @@
   transition: all 0.3s ease;
 }
 
-.service-card:hover {
+.service-card-about:hover {
   background: linear-gradient(
     90deg,
     rgba(43, 100, 206, 1) 0%,
